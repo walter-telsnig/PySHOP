@@ -37,6 +37,24 @@ def generate_synthetic_data(data_dir):
     inflow_df.to_csv(os.path.join(data_dir, 'inflow.csv'), index=False)
     print(f"Generated inflow.csv with {len(inflow_df)} rows.")
 
+    # 3. Availability Data (1 = Available, 0 = Maintenance)
+    avail_df = pd.DataFrame({'timestamp': dates})
+    avail_df['Turbine1'] = 1
+    avail_df['Pump1'] = 1
+    
+    # Scheduled maintenance for Turbine1 (June 1-7)
+    june_start = datetime(2025, 6, 1)
+    june_end = datetime(2025, 6, 8)
+    avail_df.loc[(avail_df['timestamp'] >= june_start) & (avail_df['timestamp'] < june_end), 'Turbine1'] = 0
+    
+    # Scheduled maintenance for Pump1 (Oct 25 - Nov 1)
+    oct_start = datetime(2025, 10, 25)
+    oct_end = datetime(2025, 11, 1)
+    avail_df.loc[(avail_df['timestamp'] >= oct_start) & (avail_df['timestamp'] < oct_end), 'Pump1'] = 0
+    
+    avail_df.to_csv(os.path.join(data_dir, 'availability.csv'), index=False)
+    print(f"Generated availability.csv with {len(avail_df)} rows.")
+
 if __name__ == "__main__":
     base_dir = r'c:\Users\User\OneDrive - Alpen-Adria Universität Klagenfurt\SS26\PySHOP'
     data_dir = os.path.join(base_dir, 'data', 'input')

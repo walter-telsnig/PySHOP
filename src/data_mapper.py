@@ -53,3 +53,22 @@ def map_input_data(shop, data_dir):
             if wv_key in df_init:
                 wv = float(df_init[wv_key])
                 shop.model.reservoir[res_name].water_value_input.set([{'xy': [[0.0, wv]], 'ref': 0.0}])
+
+    # 4. Map Availability
+    avail_file = os.path.join(data_dir, 'availability.csv')
+    if os.path.exists(avail_file):
+        print(f"Mapping availability from {avail_file}...")
+        df_avail = pd.read_csv(avail_file)
+        df_avail['timestamp'] = pd.to_datetime(df_avail['timestamp'])
+        
+        # Generator availability (Invert: 1=Avail in CSV -> 0=Maint in SHOP)
+        for gen_name in shop.model.generator.get_object_names():
+            if gen_name in df_avail.columns:
+                series = pd.Series(1 - df_avail[gen_name].values, index=df_avail['timestamp'])
+                shop.model.generator[gen_name].maintenance_flag.set(series)
+                
+        # Pump availability (Invert: 1=Avail in CSV -> 0=Maint in SHOP)
+        for pump_name in shop.model.pump.get_object_names():
+            if pump_name in df_avail.columns:
+                series = pd.Series(1 - df_avail[pump_name].values, index=df_avail['timestamp'])
+                shop.model.pump[pump_name].maintenance_flag.set(series)

@@ -6,12 +6,15 @@ __pycache__/
 
 # SHOP Specific
 Licence/
+shop.log
+shop_yaml.yaml
+output.txt
 
 # Environment
 .env
 
 # Data Output (plots, etc.)
-data/output/*.png
+# (Synchronized as requested)
 
 # IDEs
 .vscode/

@@ -13,7 +13,7 @@ This project implements a hydro-power optimization system using `sintef-pyshop`,
   - `visualizer.py`: Tool to plot input data trends (Headless Matplotlib).
   - `runner.py`: Main entry point for executing optimization scenarios.
 - `data/`:
-  - `input/`: Standardized CSV data files (market prices, inflows, initial conditions).
+  - `input/`: Standardized CSV data files (market prices, inflows, initial conditions, availability).
   - `output/`: Optimization results and diagnostic plots.
 - `Licence/`: Contains necessary SHOP binaries and license file.
 

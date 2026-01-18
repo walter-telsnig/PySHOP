@@ -44,6 +44,27 @@ def visualize_input_data(data_dir):
         print(f"Saved inflow plot to {inflow_plot}")
         plt.close()
 
+    # 3. Plot Availability
+    avail_file = os.path.join(data_dir, 'availability.csv')
+    if os.path.exists(avail_file):
+        df_avail = pd.read_csv(avail_file)
+        df_avail['timestamp'] = pd.to_datetime(df_avail['timestamp'])
+        
+        plt.figure(figsize=(12, 6))
+        plt.step(df_avail['timestamp'], df_avail['Turbine1'], label='Turbine1 Availability (1=On)', where='post', color='blue', alpha=0.7)
+        plt.step(df_avail['timestamp'], df_avail['Pump1'], label='Pump1 Availability (1=On)', where='post', color='cyan', alpha=0.7)
+        plt.title('Unit Availability Schedule (1=Available, 0=Maintenance)')
+        plt.xlabel('Date')
+        plt.ylabel('Availability Status')
+        plt.yticks([0, 1], ['Maint. (0)', 'Available (1)'])
+        plt.legend()
+        plt.grid(True, alpha=0.3)
+        
+        avail_plot = os.path.join(data_dir, '..', 'output', 'availability_trends.png')
+        plt.savefig(avail_plot)
+        print(f"Saved availability plot to {avail_plot}")
+        plt.close()
+
 if __name__ == "__main__":
     base_dir = r'c:\Users\User\OneDrive - Alpen-Adria Universität Klagenfurt\SS26\PySHOP'
     data_dir = os.path.join(base_dir, 'data', 'input')
