@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+
+# SHOP Specific
+Licence/
+
+# Environment
+.env
+
+# Data Output (plots, etc.)
+data/output/*.png
+
+# IDEs
+.vscode/
+.idea/
