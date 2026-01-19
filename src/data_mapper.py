@@ -72,3 +72,61 @@ def map_input_data(shop, data_dir):
             if pump_name in df_avail.columns:
                 series = pd.Series(1 - df_avail[pump_name].values, index=df_avail['timestamp'])
                 shop.model.pump[pump_name].maintenance_flag.set(series)
+
+    # 5. Map Reservoir Constraints
+    constr_file = os.path.join(data_dir, 'reservoir_constraints.csv')
+    if os.path.exists(constr_file):
+        print(f"Mapping reservoir constraints from {constr_file}...")
+        df_constr = pd.read_csv(constr_file)
+        df_constr['timestamp'] = pd.to_datetime(df_constr['timestamp'])
+        
+        for res_name in shop.model.reservoir.get_object_names():
+            min_col = f"{res_name}_min"
+            max_col = f"{res_name}_max"
+            pen_col = f"{res_name}_penalty"
+            
+            if min_col in df_constr.columns:
+                series = pd.Series(df_constr[min_col].values, index=df_constr['timestamp'])
+                shop.model.reservoir[res_name].tactical_limit_min.set(series)
+                
+            if max_col in df_constr.columns:
+                series = pd.Series(df_constr[max_col].values, index=df_constr['timestamp'])
+                shop.model.reservoir[res_name].tactical_limit_max.set(series)
+
+            # Map flags and costs for tactical limits
+            try:
+                if min_col in df_constr.columns:
+                    shop.model.reservoir[res_name].tactical_limit_min_flag.set(1)
+                if max_col in df_constr.columns:
+                    shop.model.reservoir[res_name].tactical_limit_max_flag.set(1)
+                
+                if pen_col in df_constr.columns:
+                    penalty_val = float(df_constr[pen_col].mean())
+                    # In many SHOP versions, tactical constraints use 'tactical_cost_max/min'
+                    shop.model.reservoir[res_name].tactical_cost_min.set(penalty_val)
+                    shop.model.reservoir[res_name].tactical_cost_min_flag.set(1)
+                    shop.model.reservoir[res_name].tactical_cost_max.set(penalty_val)
+                    shop.model.reservoir[res_name].tactical_cost_max_flag.set(1)
+            except Exception as e:
+                print(f"Note: Some tactical penalty attributes could not be set for {res_name}: {e}")
+
+    # 6. Map Plant Limits (Grid Injection Limit)
+    # User requested implementing this on Plant or Group instead of Market.
+    # We use 'max_p_constr' on the Plant to limit active power output.
+    # This acts as a physical or regulatory limit on the plant's connection.
+    try:
+        # Example: Limit ToyPlant to 40 MW (below its installed 50 MW)
+        # You can also use a TimeSeries here for dynamic limits.
+        
+        # Method A: Direct Plant Constraint
+        shop.model.plant.ToyPlant.max_p_constr.set(45.0)
+        
+        # Method B: Group Constraint (If you had multiple plants)
+        # if hasattr(shop.model, 'group'):
+        #     if "GridGroup" not in shop.model.group.get_object_names():
+        #         g = shop.model.group.add_object("GridGroup")
+        #         g.add_object(shop.model.plant.ToyPlant)
+        #     shop.model.group.GridGroup.max_prod.set(45.0)
+            
+    except Exception as e:
+        print(f"Error setting plant limits: {e}")

@@ -55,6 +55,23 @@ def generate_synthetic_data(data_dir):
     avail_df.to_csv(os.path.join(data_dir, 'availability.csv'), index=False)
     print(f"Generated availability.csv with {len(avail_df)} rows.")
 
+    # 4. Reservoir Constraints (Tactical Limits)
+    res_constr_df = pd.DataFrame({'timestamp': dates})
+    
+    # UpperRes: Try to keep between 40% and 90% (MaxVol=10)
+    # Adding some seasonal variation to the limits as an example
+    res_constr_df['UpperRes_min'] = 2.0 + 1.0 * np.sin(2 * np.pi * np.arange(periods) / 8760)
+    res_constr_df['UpperRes_max'] = 9.0
+    res_constr_df['UpperRes_penalty'] = 50.0 
+    
+    # LowerRes: Try to keep between 20% and 80% (MaxVol=20)
+    res_constr_df['LowerRes_min'] = 4.0
+    res_constr_df['LowerRes_max'] = 16.0
+    res_constr_df['LowerRes_penalty'] = 50.0
+    
+    res_constr_df.to_csv(os.path.join(data_dir, 'reservoir_constraints.csv'), index=False)
+    print(f"Generated reservoir_constraints.csv with {len(res_constr_df)} rows.")
+
 if __name__ == "__main__":
     base_dir = r'c:\Users\User\OneDrive - Alpen-Adria Universität Klagenfurt\SS26\PySHOP'
     data_dir = os.path.join(base_dir, 'data', 'input')
