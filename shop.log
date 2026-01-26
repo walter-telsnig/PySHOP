@@ -2,7 +2,7 @@ INFORMATION: 1032
 17.9.0 Cplex 20.1.0 Gurobi 7.5 OSI/CBC 2.9 Armadillo 15.2.1 (Medium Roast Deluxe) Intel MKL 2023.0.0 2025 - 12 - 19
 
 INFORMATION: 1047
-Current time: Mon Jan 19 12:37:16 2026
+Current time: Mon Jan 26 23:38:39 2026
 
 INFORMATION: 1001
 Command: set code /incremental 
@@ -122,7 +122,7 @@ INFORMATION: 1011
 1. iteration.
 --------------*----------------*------------
 INFORMATION: 1078
-Solver license opened at 2026-01-19T12:37:17.
+Solver license opened at 2026-01-26T23:38:40.
 --------------*----------------*------------
 INFORMATION: 1013
 LP/MIP-model size: 234342 variables. 164426 constraints. 605478 elements. 0 binaries
@@ -132,7 +132,7 @@ Start optimizing.
 INFORMATION: 1018
 CPLEX message. Code 1. Optimal solution is available
 INFORMATION: 1079
-Solver license closed at 2026-01-19T12:37:47.
+Solver license closed at 2026-01-26T23:39:09.
 --------------*----------------*------------
 INFORMATION: 1017
 Start updating results.
@@ -25708,5 +25708,5 @@ Network load value = -0.000000
 INFORMATION: 1031
 Maximum unbalance       2.22 MW.
 INFORMATION: 1046
-Time used in CPLEX   36.98 s.
+Time used in CPLEX   32.01 s.
 --------------*----------------*------------
