@@ -132,6 +132,18 @@ def run_toy_example():
     map_input_data(shop, data_dir)
     
     # 5. Execute optimization
+    print("Applying end-level constraints...")
+    for res_name in ["UpperRes", "LowerRes"]:
+        res = shop.model.reservoir[res_name]
+        start_vol = res.start_vol.get()
+        if start_vol is not None:
+            # Set target at the very last time step
+            res.schedule.set(pd.Series([float(start_vol)], index=[endtime]))
+            res.schedule_flag.set(1) # Hard target
+            res.upper_slack.set(float(start_vol) + 0.01)
+            res.lower_slack.set(float(start_vol) - 0.01)
+            print(f"  {res_name}: Forced to {start_vol} Mm3 (+/- 0.01) at {endtime}")
+
     print("Running optimization...")
     shop.execute_full_command("set_code /incremental")
     shop.execute_full_command("set_method simplex")
@@ -150,6 +162,10 @@ def run_toy_example():
     vol_upper = shop.model.reservoir.UpperRes.storage.get()
     if vol_upper is not None and hasattr(vol_upper, 'iloc') and not vol_upper.empty:
         print(f"Final Volume UpperRes: {vol_upper.iloc[-1]:.2f} Mm3")
+
+    vol_lower = shop.model.reservoir.LowerRes.storage.get()
+    if vol_lower is not None and hasattr(vol_lower, 'iloc') and not vol_lower.empty:
+        print(f"Final Volume LowerRes: {vol_lower.iloc[-1]:.2f} Mm3")
 
     # 7. Save and Visualize
     save_results(shop, base_dir)

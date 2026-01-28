@@ -1,0 +1,589 @@
+INFORMATION: 1032
+15.0.0.1 Cplex 20.1.0 Gurobi 7.5 OSI/CBC 2.9 2023-02-28
+
+INFORMATION: 1047
+Current time: Tue Jul 15 10:54:06 2025
+
+DIAGNOSIS WARNING: 3231
+Reservoir Wiederschwing: XY function Volume/Head, Value no 21 destroyes convexity.
+X-value off by -0.000375.
+DIAGNOSIS WARNING: 3336
+Reservoir Wiederschwing has a non-positive energy input value of 0.000000.
+DIAGNOSIS WARNING: 3205
+Reservoir Wiederschwing: 0 errors 2 warnings.
+--------------*----------------*------------
+DIAGNOSIS WARNING: 3336
+Reservoir Drau has a non-positive energy input value of 0.000000.
+DIAGNOSIS WARNING: 3205
+Reservoir Drau: 0 errors 1 warnings.
+--------------*----------------*------------
+WARNING: 1206
+Model testing gave 3 warnings.
+--------------*----------------*------------
+
+Overview over input data:
+
+Max number of main iterations       : 5
+Switch to incremental formulation   : 1000
+Convergence criteria                : 1.000000
+Plant head optimization             : Yes
+Load penalty variables added        : Yes 
+Load penalty cost                   : 500000.00 
+Power input limit penalty variables added        : Yes 
+Reservoir penalty variables added        : Yes 
+Reservoir penalty cost                   : 10000000.00 
+
+If ramping constraints are activated 
+Reservoir ramping penalty variables added?       : Yes 
+Reservoir ramping penalty cost                   : 100.00 
+
+If ramping constraints are activated 
+Discharge ramping penalty variables added?       : Yes 
+Discharge_ramping penalty cost                   : 10000.00 
+
+Number of bypass segments applied   : 1  
+Penalty bypass cost                 : 0.01  
+Bypass max. capacity (m3/s)         : 30.00  
+
+Number of gate segments applied     : 3  
+Penalty gate cost                   : 0.00  
+Gate max. capacity (m3/s)           : 100.00  
+
+Number of overflow segments applied : 3  
+Penalty overflow cost               : 5000000.00  
+Penalty overflow cost time adjust   : -0.00  
+Overflow max. capacity (m3/s)       : 200.00  
+
+Reserve penalty cost                   : 1000.00  
+Gate ramping cost (<currency>/(m3/s))      : 0.00  
+--------------*----------------*------------
+Topology of the system
+
+
+Reservoir name: Wiederschwing
+  Connected upstream  :
+  Connected downstream  :
+     Kamering in position 0
+     Gate_KAM_Drau in position 3
+
+Reservoir name: Drau
+  Connected upstream  :
+     Kamering in position 0
+     Gate_KAM_Drau in position 1
+  Connected downstream  :
+--------------*----------------*------------
+
+
+Summary of market exchange prices:
+
+ Area 1 
+	Maximum purchase price 	221.010 	Minimum purchase price 	  0.070 
+	Maximum sale price 	221.010 	Minimum sale price 	  0.070
+
+ Load penalty cost: 500000.00 
+
+--------------*----------------*------------
+Topology of the plants
+
+
+Plant name: Kamering
+      Outlet line: 514.0, downstream lrl: 339.0, downstream hrl: 339.5.
+--------------*----------------*------------
+
+Range of reservoir endpoint descriptions:
+
+
+Range of water value references 
+	Average:    0.00, 	Minimum:    0.00, 	Maximum:    0.00
+INFORMATION: 1051
+Overview SHOP environment variables (on), see shop.log:
+SHOP_BEP_COST_CURVE                               UNLIMITED access 
+SHOP_JUNCTION_BELOW_PLANT                         UNLIMITED access 
+SHOP_TACTICAL_LIMIT                               UNLIMITED access 
+SHOP_SUM_P_TIME_PERIOD                            UNLIMITED access 
+SHOP_SUM_Q_TIME_STEP                              UNLIMITED access 
+SHOP_INITIAL_STATE                                UNLIMITED access 
+SHOP_FEEDING_FEE                                  UNLIMITED access 
+SHOP_TIME_VARIANT_GEN_MAX_PROD                    UNLIMITED access 
+SHOP_SCHEDULE_M3S                                 UNLIMITED access 
+SHOP_TIME_STARTCOST                               UNLIMITED access 
+SHOP_RELTIME                                      UNLIMITED access 
+SHOP_EBL_PLANT                                    UNLIMITED access 
+SHOP_JUNCG_SERIES                                 UNLIMITED access 
+SHOP_JUNC_GATE                                    UNLIMITED access 
+SHOP_JUNCG_TWOWAY                                 UNLIMITED access 
+SHOP_RSV_HEAD_OPT                                 UNLIMITED access 
+SHOP_OVERFLOW_COST                                UNLIMITED access 
+SHOP_MULTI_OBJECT                                 UNLIMITED access 
+SHOP_EXTRA_DATA                                   UNLIMITED access 
+SHOP_SUM_P_TIME_STEP                              UNLIMITED access 
+SHOP_AVERAGE_Q                                    UNLIMITED access 
+SHOP_TIME_VARIANT_GEN_MIN_PROD                    UNLIMITED access 
+SHOP_FREQ_RES_MARKET                              UNLIMITED access 
+SHOP_PUMPING_CONSTRAINT                           UNLIMITED access 
+SHOP_RESERVE_GROUP                                UNLIMITED access 
+SHOP_RESERVE_CLUSTERING_FUNCTIONALITY             UNLIMITED access 
+SHOP_DISCHARGE_GROUP_FUNCTIONALITY                UNLIMITED access 
+SHOP_CONSUMPTION_FEE                              UNLIMITED access 
+SHOP_OPEN                                         UNLIMITED access 
+
+End overview over input data:
+
+--------------*----------------*------------
+INFORMATION: 1002
+Parameter settings: (1. iteration).
+INFORMATION: 1003
+Full description. No curve fitting.
+INFORMATION: 1007
+Ramping on request (if ramping exceeded). 
+INFORMATION: 1009
+Head optimization on.
+INFORMATION: 1011
+1. iteration.
+--------------*----------------*------------
+INFORMATION: 1015
+Active problem has MIP.
+INFORMATION: 1078
+Solver license opened at 2025-07-15T10:54:08.
+--------------*----------------*------------
+INFORMATION: 1013
+LP/MIP-model size: 192726 variables. 96364 constraints. 481808 elements. 8760 binaries
+--------------*----------------*------------
+INFORMATION: 1016
+Start optimizing.
+INFORMATION: 1048
+MIP gap                        0.2327 
+Best objective value     -3267787.78
+MIP objective value      -3260182.26
+Difference from best objective value         7605.52  
+INFORMATION: 1018
+CPLEX message. Code 102. Optimal whithin tolerances
+INFORMATION: 1079
+Solver license closed at 2025-07-15T10:54:21.
+--------------*----------------*------------
+INFORMATION: 1017
+Start updating results.
+INFORMATION: 1033
+Objective (excluding penalties) = -3322564.04
+INFORMATION: 1034
+Objective (including penalties) = -3322564.04
+INFORMATION: 1035
+Sum buy and sale cost =           -3322564.04
+INFORMATION: 1052
+Sum contract costs =              0.00
+INFORMATION: 1036
+Sum startup costs =               0.00
+INFORMATION: 1037
+End reservoir value =             0.00
+INFORMATION: 1038
+Sum penalties =                   0.00
+INFORMATION: 1039
+Sum minor penalties =             0.00
+INFORMATION: 1040
+Sum major penalties =             0.00
+INFORMATION: 1064
+Network load value = -0.000000
+--------------*----------------*------------
+INFORMATION: 1031
+Maximum unbalance       0.39 MW.
+INFORMATION: 1046
+Time used in CPLEX   13.79 s.
+--------------*----------------*------------
+INFORMATION: 1002
+Parameter settings: (2. iteration).
+INFORMATION: 1003
+Full description. No curve fitting.
+INFORMATION: 1007
+Ramping on request (if ramping exceeded). 
+INFORMATION: 1009
+Head optimization on.
+INFORMATION: 1011
+2. iteration.
+--------------*----------------*------------
+INFORMATION: 1015
+Active problem has MIP.
+INFORMATION: 1078
+Solver license opened at 2025-07-15T10:54:23.
+--------------*----------------*------------
+INFORMATION: 1013
+LP/MIP-model size: 203176 variables. 105123 constraints. 514849 elements. 8760 binaries
+--------------*----------------*------------
+INFORMATION: 1016
+Start optimizing.
+INFORMATION: 1048
+MIP gap                        0.2899 
+Best objective value     -3364828.18
+MIP objective value      -3355073.79
+Difference from best objective value         9754.40  
+INFORMATION: 1018
+CPLEX message. Code 102. Optimal whithin tolerances
+INFORMATION: 1079
+Solver license closed at 2025-07-15T10:54:36.
+--------------*----------------*------------
+INFORMATION: 1017
+Start updating results.
+INFORMATION: 1042
+Reservoir tactical penalties are used 1 times. See shop.log.
+DIAGNOSIS WARNING: 3248
+Reservoir Wiederschwing :Tactical penalty is used at t = 30/11 07:00. Penalty value   0.00 MM3
+INFORMATION: 1033
+Objective (excluding penalties) = -3418730.90
+INFORMATION: 1034
+Objective (including penalties) = -3418689.13
+INFORMATION: 1035
+Sum buy and sale cost =           -3418730.90
+INFORMATION: 1052
+Sum contract costs =              0.00
+INFORMATION: 1036
+Sum startup costs =               0.00
+INFORMATION: 1037
+End reservoir value =             0.00
+INFORMATION: 1038
+Sum penalties =                   41.76
+INFORMATION: 1039
+Sum minor penalties =             41.76
+INFORMATION: 1040
+Sum major penalties =             0.00
+INFORMATION: 1055
+Minor: Reservoir tactical penalty cost =        41.76
+INFORMATION: 1064
+Network load value = -0.000000
+--------------*----------------*------------
+INFORMATION: 1031
+Maximum unbalance       0.49 MW.
+INFORMATION: 1046
+Time used in CPLEX   13.02 s.
+--------------*----------------*------------
+INFORMATION: 1002
+Parameter settings: (3. iteration).
+INFORMATION: 1003
+Full description. No curve fitting.
+INFORMATION: 1007
+Ramping on request (if ramping exceeded). 
+INFORMATION: 1009
+Head optimization on.
+INFORMATION: 1011
+3. iteration.
+--------------*----------------*------------
+INFORMATION: 1015
+Active problem has MIP.
+INFORMATION: 1078
+Solver license opened at 2025-07-15T10:54:38.
+--------------*----------------*------------
+INFORMATION: 1013
+LP/MIP-model size: 205972 variables. 105123 constraints. 526033 elements. 8760 binaries
+--------------*----------------*------------
+INFORMATION: 1016
+Start optimizing.
+INFORMATION: 1048
+MIP gap                        0.4220 
+Best objective value     -3355248.69
+MIP objective value      -3341090.96
+Difference from best objective value        14157.74  
+INFORMATION: 1018
+CPLEX message. Code 102. Optimal whithin tolerances
+INFORMATION: 1079
+Solver license closed at 2025-07-15T10:54:52.
+--------------*----------------*------------
+INFORMATION: 1017
+Start updating results.
+INFORMATION: 1033
+Objective (excluding penalties) = -3405453.80
+INFORMATION: 1034
+Objective (including penalties) = -3405453.80
+INFORMATION: 1035
+Sum buy and sale cost =           -3405453.80
+INFORMATION: 1052
+Sum contract costs =              0.00
+INFORMATION: 1036
+Sum startup costs =               0.00
+INFORMATION: 1037
+End reservoir value =             0.00
+INFORMATION: 1038
+Sum penalties =                   0.00
+INFORMATION: 1039
+Sum minor penalties =             0.00
+INFORMATION: 1040
+Sum major penalties =             0.00
+INFORMATION: 1064
+Network load value = -0.000000
+--------------*----------------*------------
+INFORMATION: 1031
+Maximum unbalance       0.24 MW.
+INFORMATION: 1046
+Time used in CPLEX   14.48 s.
+--------------*----------------*------------
+INFORMATION: 1002
+Parameter settings: (4. iteration).
+INFORMATION: 1003
+Full description. No curve fitting.
+INFORMATION: 1007
+Ramping on request (if ramping exceeded). 
+INFORMATION: 1009
+Head optimization on.
+INFORMATION: 1011
+4. iteration.
+--------------*----------------*------------
+INFORMATION: 1015
+Active problem has MIP.
+INFORMATION: 1078
+Solver license opened at 2025-07-15T10:54:54.
+--------------*----------------*------------
+INFORMATION: 1013
+LP/MIP-model size: 205560 variables. 105123 constraints. 524385 elements. 8760 binaries
+--------------*----------------*------------
+INFORMATION: 1016
+Start optimizing.
+INFORMATION: 1048
+MIP gap                        0.9354 
+Best objective value     -3354871.04
+MIP objective value      -3323489.30
+Difference from best objective value        31381.74  
+INFORMATION: 1018
+CPLEX message. Code 102. Optimal whithin tolerances
+INFORMATION: 1079
+Solver license closed at 2025-07-15T10:55:07.
+--------------*----------------*------------
+INFORMATION: 1017
+Start updating results.
+INFORMATION: 1033
+Objective (excluding penalties) = -3387656.75
+INFORMATION: 1034
+Objective (including penalties) = -3387656.75
+INFORMATION: 1035
+Sum buy and sale cost =           -3387656.75
+INFORMATION: 1052
+Sum contract costs =              0.00
+INFORMATION: 1036
+Sum startup costs =               0.00
+INFORMATION: 1037
+End reservoir value =             0.00
+INFORMATION: 1038
+Sum penalties =                   0.00
+INFORMATION: 1039
+Sum minor penalties =             0.00
+INFORMATION: 1040
+Sum major penalties =             0.00
+INFORMATION: 1064
+Network load value = -0.000000
+--------------*----------------*------------
+INFORMATION: 1031
+Maximum unbalance       0.13 MW.
+INFORMATION: 1046
+Time used in CPLEX   13.59 s.
+--------------*----------------*------------
+INFORMATION: 1002
+Parameter settings: (5. iteration).
+INFORMATION: 1003
+Full description. No curve fitting.
+INFORMATION: 1007
+Ramping on request (if ramping exceeded). 
+INFORMATION: 1009
+Head optimization on.
+INFORMATION: 1011
+5. iteration.
+--------------*----------------*------------
+INFORMATION: 1015
+Active problem has MIP.
+INFORMATION: 1078
+Solver license opened at 2025-07-15T10:55:09.
+--------------*----------------*------------
+INFORMATION: 1013
+LP/MIP-model size: 205680 variables. 105123 constraints. 524865 elements. 8760 binaries
+--------------*----------------*------------
+INFORMATION: 1016
+Start optimizing.
+INFORMATION: 1048
+MIP gap                        0.4116 
+Best objective value     -3354678.13
+MIP objective value      -3340870.72
+Difference from best objective value        13807.41  
+INFORMATION: 1018
+CPLEX message. Code 102. Optimal whithin tolerances
+INFORMATION: 1079
+Solver license closed at 2025-07-15T10:55:23.
+--------------*----------------*------------
+INFORMATION: 1017
+Start updating results.
+INFORMATION: 1033
+Objective (excluding penalties) = -3405179.57
+INFORMATION: 1034
+Objective (including penalties) = -3405179.57
+INFORMATION: 1035
+Sum buy and sale cost =           -3405179.57
+INFORMATION: 1052
+Sum contract costs =              0.00
+INFORMATION: 1036
+Sum startup costs =               0.00
+INFORMATION: 1037
+End reservoir value =             0.00
+INFORMATION: 1038
+Sum penalties =                   0.00
+INFORMATION: 1039
+Sum minor penalties =             0.00
+INFORMATION: 1040
+Sum major penalties =             0.00
+INFORMATION: 1064
+Network load value = -0.000000
+--------------*----------------*------------
+INFORMATION: 1031
+Maximum unbalance       0.12 MW.
+INFORMATION: 1046
+Time used in CPLEX   14.34 s.
+--------------*----------------*------------
+INFORMATION: 1002
+Parameter settings: (1. iteration).
+INFORMATION: 1005
+Incremental description.
+INFORMATION: 1007
+Ramping on request (if ramping exceeded). 
+INFORMATION: 1009
+Head optimization on.
+INFORMATION: 1011
+1. iteration.
+--------------*----------------*------------
+INFORMATION: 1078
+Solver license opened at 2025-07-15T10:55:24.
+--------------*----------------*------------
+INFORMATION: 1013
+LP/MIP-model size: 148109 variables. 72951 constraints. 317463 elements. 0 binaries
+--------------*----------------*------------
+INFORMATION: 1016
+Start optimizing.
+INFORMATION: 1018
+CPLEX message. Code 1. Optimal solution is available
+INFORMATION: 1079
+Solver license closed at 2025-07-15T10:55:33.
+--------------*----------------*------------
+INFORMATION: 1017
+Start updating results.
+INFORMATION: 1033
+Objective (excluding penalties) = -3405326.94
+INFORMATION: 1034
+Objective (including penalties) = -3405326.94
+INFORMATION: 1035
+Sum buy and sale cost =           -3405326.94
+INFORMATION: 1052
+Sum contract costs =              0.00
+INFORMATION: 1036
+Sum startup costs =               0.00
+INFORMATION: 1037
+End reservoir value =             0.00
+INFORMATION: 1038
+Sum penalties =                   0.00
+INFORMATION: 1039
+Sum minor penalties =             0.00
+INFORMATION: 1040
+Sum major penalties =             0.00
+INFORMATION: 1064
+Network load value = -0.000000
+--------------*----------------*------------
+INFORMATION: 1031
+Maximum unbalance       0.01 MW.
+INFORMATION: 1046
+Time used in CPLEX    8.91 s.
+--------------*----------------*------------
+INFORMATION: 1002
+Parameter settings: (2. iteration).
+INFORMATION: 1005
+Incremental description.
+INFORMATION: 1007
+Ramping on request (if ramping exceeded). 
+INFORMATION: 1009
+Head optimization on.
+INFORMATION: 1011
+2. iteration.
+--------------*----------------*------------
+INFORMATION: 1078
+Solver license opened at 2025-07-15T10:55:34.
+--------------*----------------*------------
+INFORMATION: 1013
+LP/MIP-model size: 148120 variables. 72951 constraints. 317507 elements. 0 binaries
+--------------*----------------*------------
+INFORMATION: 1016
+Start optimizing.
+INFORMATION: 1018
+CPLEX message. Code 1. Optimal solution is available
+INFORMATION: 1079
+Solver license closed at 2025-07-15T10:55:43.
+--------------*----------------*------------
+INFORMATION: 1017
+Start updating results.
+INFORMATION: 1033
+Objective (excluding penalties) = -3405299.94
+INFORMATION: 1034
+Objective (including penalties) = -3405299.94
+INFORMATION: 1035
+Sum buy and sale cost =           -3405299.94
+INFORMATION: 1052
+Sum contract costs =              0.00
+INFORMATION: 1036
+Sum startup costs =               0.00
+INFORMATION: 1037
+End reservoir value =             0.00
+INFORMATION: 1038
+Sum penalties =                   0.00
+INFORMATION: 1039
+Sum minor penalties =             0.00
+INFORMATION: 1040
+Sum major penalties =             0.00
+INFORMATION: 1064
+Network load value = -0.000000
+--------------*----------------*------------
+INFORMATION: 1031
+Maximum unbalance       0.01 MW.
+INFORMATION: 1046
+Time used in CPLEX    9.25 s.
+--------------*----------------*------------
+INFORMATION: 1002
+Parameter settings: (3. iteration).
+INFORMATION: 1005
+Incremental description.
+INFORMATION: 1007
+Ramping on request (if ramping exceeded). 
+INFORMATION: 1009
+Head optimization on.
+INFORMATION: 1011
+3. iteration.
+--------------*----------------*------------
+INFORMATION: 1078
+Solver license opened at 2025-07-15T10:55:44.
+--------------*----------------*------------
+INFORMATION: 1013
+LP/MIP-model size: 148121 variables. 72951 constraints. 317511 elements. 0 binaries
+--------------*----------------*------------
+INFORMATION: 1016
+Start optimizing.
+INFORMATION: 1018
+CPLEX message. Code 1. Optimal solution is available
+INFORMATION: 1079
+Solver license closed at 2025-07-15T10:55:54.
+--------------*----------------*------------
+INFORMATION: 1017
+Start updating results.
+INFORMATION: 1033
+Objective (excluding penalties) = -3405303.56
+INFORMATION: 1034
+Objective (including penalties) = -3405303.56
+INFORMATION: 1035
+Sum buy and sale cost =           -3405303.56
+INFORMATION: 1052
+Sum contract costs =              0.00
+INFORMATION: 1036
+Sum startup costs =               0.00
+INFORMATION: 1037
+End reservoir value =             0.00
+INFORMATION: 1038
+Sum penalties =                   0.00
+INFORMATION: 1039
+Sum minor penalties =             0.00
+INFORMATION: 1040
+Sum major penalties =             0.00
+INFORMATION: 1064
+Network load value = -0.000000
+--------------*----------------*------------
+INFORMATION: 1031
+Maximum unbalance       0.01 MW.
+INFORMATION: 1046
+Time used in CPLEX   10.11 s.
+--------------*----------------*------------

@@ -2,7 +2,7 @@ INFORMATION: 1032
 17.9.0 Cplex 20.1.0 Gurobi 7.5 OSI/CBC 2.9 Armadillo 15.2.1 (Medium Roast Deluxe) Intel MKL 2023.0.0 2025 - 12 - 19
 
 INFORMATION: 1047
-Current time: Mon Jan 26 23:38:39 2026
+Current time: Wed Jan 28 14:28:43 2026
 
 INFORMATION: 1001
 Command: set code /incremental 
@@ -122,17 +122,17 @@ INFORMATION: 1011
 1. iteration.
 --------------*----------------*------------
 INFORMATION: 1078
-Solver license opened at 2026-01-26T23:38:40.
+Solver license opened at 2026-01-28T14:28:44.
 --------------*----------------*------------
 INFORMATION: 1013
-LP/MIP-model size: 234342 variables. 164426 constraints. 605478 elements. 0 binaries
+LP/MIP-model size: 234342 variables. 164430 constraints. 605482 elements. 0 binaries
 --------------*----------------*------------
 INFORMATION: 1016
 Start optimizing.
 INFORMATION: 1018
 CPLEX message. Code 1. Optimal solution is available
 INFORMATION: 1079
-Solver license closed at 2026-01-26T23:39:09.
+Solver license closed at 2026-01-28T14:29:16.
 --------------*----------------*------------
 INFORMATION: 1017
 Start updating results.
@@ -141,7 +141,7 @@ Endpoint penalties are used 1 times. See shop.log.
 DIAGNOSIS WARNING: 3233
 Endpoint penalty are used on LowerRes. Penalty value  55.20 MM3
 INFORMATION: 1024
-Reservoir penalties are used 12744 times. See shop.log.
+Reservoir penalties are used 12745 times. See shop.log.
 DIAGNOSIS WARNING: 3234
 Reservoir penalty are used at t = 9/4 11:00, on UpperRes. Penalty value   0.01 MM3
 DIAGNOSIS WARNING: 3234
@@ -12852,6 +12852,8 @@ DIAGNOSIS WARNING: 3234
 Reservoir penalty are used at t = 31/12 21:00, on UpperRes. Penalty value   0.35 MM3
 DIAGNOSIS WARNING: 3234
 Reservoir penalty are used at t = 31/12 22:00, on UpperRes. Penalty value   0.18 MM3
+DIAGNOSIS WARNING: 3234
+Reservoir penalty are used at t = 31/12 23:00, on UpperRes. Penalty value   4.99 MM3
 DIAGNOSIS WARNING: 3234
 Reservoir penalty are used at t = 9/4 09:00, on LowerRes. Penalty value   0.00 MM3
 DIAGNOSIS WARNING: 3234
@@ -25629,9 +25631,9 @@ Reservoir penalty are used at t = 31/12 21:00, on LowerRes. Penalty value  54.84
 DIAGNOSIS WARNING: 3234
 Reservoir penalty are used at t = 31/12 22:00, on LowerRes. Penalty value  55.02 MM3
 DIAGNOSIS WARNING: 3234
-Reservoir penalty are used at t = 31/12 23:00, on LowerRes. Penalty value  55.20 MM3
+Reservoir penalty are used at t = 31/12 23:00, on LowerRes. Penalty value  65.19 MM3
 INFORMATION: 1042
-Reservoir tactical penalties are used 14158 times. See shop.log.
+Reservoir tactical penalties are used 14156 times. See shop.log.
 DIAGNOSIS WARNING: 3248
 Reservoir UpperRes :Tactical penalty is used at t = 13/1 01:00. Penalty value   0.00 MM3
 DIAGNOSIS WARNING: 3248
@@ -25679,7 +25681,7 @@ Remaining time steps with tactical penalty violations are not written to the log
 INFORMATION: 1033
 Objective (excluding penalties) = -663516.47
 INFORMATION: 1034
-Objective (including penalties) = 2498090212246.19
+Objective (including penalties) = 2498240011996.19
 INFORMATION: 1035
 Sum buy and sale cost =           -663426.47
 INFORMATION: 1052
@@ -25691,22 +25693,22 @@ End reservoir value =             -90.00
 INFORMATION: 1077
 Change in end reservoir value =   -45.00
 INFORMATION: 1038
-Sum penalties =                   2498090875762.65
+Sum penalties =                   2498240675512.65
 INFORMATION: 1039
-Sum minor penalties =             1680500.04
+Sum minor penalties =             1680250.04
 INFORMATION: 1040
-Sum major penalties =             2498089195262.61
+Sum major penalties =             2498238995262.61
 INFORMATION: 1054
 Major: Reservoir end penalty cost=551993794.98
 INFORMATION: 1054
-Major: Reservoir penalty cost =   2497537201467.63
+Major: Reservoir penalty cost =   2497687001467.63
 INFORMATION: 1055
-Minor: Reservoir tactical penalty cost =        1680500.04
+Minor: Reservoir tactical penalty cost =        1680250.04
 INFORMATION: 1064
 Network load value = -0.000000
 --------------*----------------*------------
 INFORMATION: 1031
 Maximum unbalance       2.22 MW.
 INFORMATION: 1046
-Time used in CPLEX   32.01 s.
+Time used in CPLEX   35.07 s.
 --------------*----------------*------------
