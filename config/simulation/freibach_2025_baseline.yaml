@@ -1,0 +1,29 @@
+# Simulation Scenario: Freibach 2025 Baseline
+
+# 1. Time Horizon
+time:
+  start: "2025-01-01 00:00:00"
+  end: "2026-01-01 00:00:00"
+  resolution: 1 # Hours
+
+# 2. Topology
+topology_file: "data/input/topology/Freibach.yaml"
+
+# 3. Dynamic Data Mapping
+# Note: Currently using existing CSVs, but code supports Excel (.xlsx)
+inputs:
+  prices:
+    file: "data/input/prices/market_price.csv"
+    column: "price"
+    time_col: "timestamp"
+  
+  inflow:
+    # If file is null, the script uses the seasonal profile fallback
+    file: null
+    seasonal_profile: [1.2, 1.4, 3.5, 8.0, 12.0, 10.0, 6.0, 4.0, 3.0, 2.5, 2.0, 1.5]
+
+# 4. Optimization Settings
+optimization:
+  full_iterations: 5
+  incremental_iterations: 3
+  energy_value_input: 10.0

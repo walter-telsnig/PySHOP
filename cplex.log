@@ -6,7 +6,7 @@ Tried aggregator 1 time.
 LP Presolve eliminated 70080 rows and 43801 columns.
 Aggregator did 43800 substitutions.
 Reduced LP has 61323 rows, 131409 columns, and 438010 nonzeros.
-Presolve time = 0.31 sec. (258.70 ticks)
+Presolve time = 0.39 sec. (258.70 ticks)
 Initializing dual steep norms . . .
 
 Iteration log . . .
@@ -52,7 +52,7 @@ Iteration: 25979   Dual objective     =  350544956725.210876
 Iteration: 26251   Dual objective     =  365250397773.625427
 Iteration: 26818   Dual objective     =  391481007722.216248
 Iteration: 27408   Dual objective     =  403242687919.824280
-Elapsed time = 4.48 sec. (10006.40 ticks, 29221 iterations)
+Elapsed time = 5.02 sec. (10006.40 ticks, 29221 iterations)
 Iteration: 29221   Dual objective     =  404219932864.651855
 Iteration: 30382   Dual objective     =  404219932864.650513
 Iteration: 31543   Dual objective     =  404219932864.650513
@@ -81,7 +81,7 @@ Tried aggregator 1 time.
 LP Presolve eliminated 80777 rows and 54498 columns.
 Aggregator did 50621 substitutions.
 Reduced LP has 61323 rows, 131409 columns, and 444831 nonzeros.
-Presolve time = 0.42 sec. (271.01 ticks)
+Presolve time = 0.34 sec. (271.01 ticks)
 Initializing dual steep norms . . .
 
 Iteration log . . .
@@ -128,7 +128,7 @@ Iteration: 24326   Dual objective     =  286749330586.998962
 Iteration: 24468   Dual objective     =  292334699422.500793
 Iteration: 25066   Dual objective     =  342713461001.406128
 Iteration: 25358   Dual objective     =  359027090582.557861
-Elapsed time = 4.97 sec. (10000.36 ticks, 25615 iterations)
+Elapsed time = 4.92 sec. (10000.36 ticks, 25615 iterations)
 Iteration: 25709   Dual objective     =  378233692130.654968
 Iteration: 26019   Dual objective     =  391150384814.181885
 Iteration: 26463   Dual objective     =  398287808017.863159
@@ -206,7 +206,7 @@ Iteration: 24399   Dual objective     =  292372159123.141052
 Iteration: 25158   Dual objective     =  352622702075.885559
 Iteration: 25424   Dual objective     =  367500878059.367920
 Iteration: 25731   Dual objective     =  382728061811.608521
-Elapsed time = 4.22 sec. (10010.05 ticks, 25986 iterations)
+Elapsed time = 4.48 sec. (10010.05 ticks, 25986 iterations)
 Iteration: 25986   Dual objective     =  392333377034.782166
 Iteration: 26443   Dual objective     =  399598155661.065735
 Iteration: 28228   Dual objective     =  401170317487.194885
@@ -239,7 +239,7 @@ Tried aggregator 1 time.
 LP Presolve eliminated 80775 rows and 54496 columns.
 Aggregator did 50623 substitutions.
 Reduced LP has 61323 rows, 131411 columns, and 444847 nonzeros.
-Presolve time = 0.34 sec. (271.10 ticks)
+Presolve time = 0.38 sec. (271.10 ticks)
 Initializing dual steep norms . . .
 
 Iteration log . . .
@@ -287,7 +287,7 @@ Iteration: 25161   Dual objective     =  355455101257.583557
 Iteration: 25465   Dual objective     =  371367336834.571106
 Iteration: 25770   Dual objective     =  385637965603.228638
 Iteration: 25906   Dual objective     =  390879709179.477783
-Elapsed time = 3.67 sec. (10000.82 ticks, 25978 iterations)
+Elapsed time = 4.14 sec. (10000.82 ticks, 25978 iterations)
 Iteration: 26367   Dual objective     =  398654121525.378601
 Iteration: 27984   Dual objective     =  401285836049.231201
 Iteration: 29004   Dual objective     =  401286056991.677429
@@ -317,7 +317,7 @@ Tried aggregator 1 time.
 LP Presolve eliminated 80775 rows and 54496 columns.
 Aggregator did 50623 substitutions.
 Reduced LP has 61323 rows, 131412 columns, and 444854 nonzeros.
-Presolve time = 0.39 sec. (271.10 ticks)
+Presolve time = 0.47 sec. (271.10 ticks)
 Initializing dual steep norms . . .
 
 Iteration log . . .
@@ -363,7 +363,7 @@ Iteration: 24804   Dual objective     =  333708226343.984619
 Iteration: 25260   Dual objective     =  366048331631.721558
 Iteration: 25603   Dual objective     =  381583520660.641357
 Iteration: 25925   Dual objective     =  393613207201.091492
-Elapsed time = 5.52 sec. (10000.03 ticks, 26265 iterations)
+Elapsed time = 5.14 sec. (10000.03 ticks, 26265 iterations)
 Iteration: 26358   Dual objective     =  400029231876.622131
 Iteration: 28032   Dual objective     =  401083056695.698120
 Iteration: 28854   Dual objective     =  401129967720.810852
@@ -455,7 +455,7 @@ Iteration: 20362   Dual objective     =  271331754871.603912
 Iteration: 20586   Dual objective     =  283828805751.877197
 Iteration: 20758   Dual objective     =  293770632499.572449
 Iteration: 21025   Dual objective     =  306344456411.241211
-Elapsed time = 5.36 sec. (10000.93 ticks, 21333 iterations)
+Elapsed time = 4.64 sec. (10000.93 ticks, 21333 iterations)
 Iteration: 21372   Dual objective     =  323729840253.034241
 Iteration: 21795   Dual objective     =  344301827983.097534
 Iteration: 22078   Dual objective     =  356449276522.739868
@@ -505,7 +505,7 @@ Tried aggregator 1 time.
 LP Presolve eliminated 40309 rows and 20617 columns.
 Aggregator did 6823 substitutions.
 Reduced LP has 39929 rows, 126621 columns, and 240600 nonzeros.
-Presolve time = 0.20 sec. (145.38 ticks)
+Presolve time = 0.25 sec. (145.38 ticks)
 Initializing dual steep norms . . .
 
 Iteration log . . .
@@ -568,7 +568,7 @@ Iteration: 21300   Dual objective     =  281136980271.840637
 Iteration: 21440   Dual objective     =  290171657671.099854
 Iteration: 21642   Dual objective     =  302344271249.714294
 Iteration: 21997   Dual objective     =  315559028246.981812
-Elapsed time = 5.49 sec. (10000.23 ticks, 22230 iterations)
+Elapsed time = 5.33 sec. (10000.23 ticks, 22230 iterations)
 Iteration: 22282   Dual objective     =  332057052375.903992
 Iteration: 22591   Dual objective     =  348491464960.373291
 Iteration: 22846   Dual objective     =  355650569711.722656
@@ -619,7 +619,7 @@ Tried aggregator 1 time.
 LP Presolve eliminated 40309 rows and 20617 columns.
 Aggregator did 6823 substitutions.
 Reduced LP has 39929 rows, 126622 columns, and 240602 nonzeros.
-Presolve time = 0.23 sec. (145.38 ticks)
+Presolve time = 0.22 sec. (145.38 ticks)
 Initializing dual steep norms . . .
 
 Iteration log . . .
@@ -675,7 +675,7 @@ Iteration: 21392   Dual objective     =  286238232370.473572
 Iteration: 21576   Dual objective     =  297707976955.060669
 Iteration: 21925   Dual objective     =  311315582757.952026
 Iteration: 22193   Dual objective     =  325921249616.251221
-Elapsed time = 5.26 sec. (10000.62 ticks, 22448 iterations)
+Elapsed time = 5.42 sec. (10000.62 ticks, 22448 iterations)
 Iteration: 22476   Dual objective     =  341998411822.165649
 Iteration: 22787   Dual objective     =  352492807716.692322
 Iteration: 22979   Dual objective     =  360699992233.607971
