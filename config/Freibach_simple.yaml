@@ -1,0 +1,107 @@
+# Freibach System - Generator Only (Simplified)
+# Based on real production data but without reversible pumps for stable optimization
+# Perfect for learning and testing
+
+topology:
+  name: "Freibach System - Generator Only"
+  description: "Simplified version without pumps for stable optimization"
+
+# Two reservoirs: Upper (Freibach) and Lower (DrauWest)
+reservoirs:
+  - name: "Freibach"
+    max_vol: 5.25
+    lrl: 705.00
+    hrl: 729.20
+    
+    # Volume-head relationship (Simplified)
+    vol_head:
+      - [0.00000, 705.00000]
+      - [2.50000, 715.00000]
+      - [5.86000, 730.00000]
+    
+    # Initial water level
+    start_vol: 2.50
+    
+    # Endpoint management
+    energy_value_input: 35.00
+  
+  - name: "DrauWest"
+    max_vol: 1000.00
+    lrl: 397.00
+    hrl: 397.50
+    
+    # Volume-head relationship
+    vol_head:
+      - [0.00000, 396.90000]
+      - [1000.00000, 397.60000]
+    
+    # Initial volume
+    start_vol: 571.0
+    
+    # Endpoint water value
+    energy_value_input: 35.00
+    
+    # No inflow (downstream reservoir fed by plant discharge)
+    inflow: 0.0
+
+# Plant connecting the two reservoirs
+plants:
+  - name: "Freibach_Plant"
+    inlet_reservoir: "Freibach"
+    outlet_reservoir: "DrauWest"
+    outlet_line: 410.00
+    main_loss: [0.0]
+    penstock_loss: [0.0, 0.0]
+
+# Two generator units
+generators:
+  - name: "Gen1"
+    plant: "Freibach_Plant"
+    penstock: 1
+    p_nom: 17.000
+    p_min: 7.000
+    p_max: 17.000
+    startcost: 0.0
+    
+    gen_eff_curve:
+      ref: 1.0
+      points:
+        - [7.00, 95.00]
+        - [17.00, 97.00]
+    
+    turb_eff_curves:
+      - ref: 324.000
+        points:
+          - [2.20, 85.00]
+          - [6.00, 85.00]
+  
+  - name: "Gen2"
+    plant: "Freibach_Plant"
+    penstock: 2
+    p_nom: 5.000
+    p_min: 1.000
+    p_max: 5.000
+    startcost: 0.0
+    
+    gen_eff_curve:
+      ref: 1.0
+      points:
+        - [1.00, 92.00]
+        - [5.00, 95.00]
+    
+    turb_eff_curves:
+      - ref: 324.000
+        points:
+          - [0.50, 85.00]
+          - [2.00, 85.00]
+
+# Time settings - 2 week optimization
+time:
+  starttime: "2026-01-29T00:00:00"
+  endtime: "2026-02-12T00:00:00"
+  timeresolution: 60
+
+# Market prices will be set programmatically
+market:
+  name: "SpotMarket"
+  # Price pattern: Peak/valley for generation optimization

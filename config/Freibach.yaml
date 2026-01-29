@@ -1,0 +1,251 @@
+# Freibach Hydropower System - Extracted from Real SHOP Model
+# Based on POWELSRV_FRELT.ascii working configuration
+# This is a real pump-turbine system with 2 reservoirs, 1 plant, 2 generators, 2 pumps
+
+topology:
+  name: "Freibach System"
+  description: "Real pump-turbine hydropower system from production data"
+
+# Two reservoirs: Upper (Freibach) and Lower (DrauWest)
+reservoirs:
+  - name: "Freibach"
+    max_vol: 5.25260  # Mm3
+    lrl: 705.00  # masl (Lower regulation limit)
+    hrl: 729.20  # masl (Higher regulation limit)
+    start_vol: 2.50000  # Mm3 (Start at mid-level)
+    
+    # Volume-head relationship (19 points from ASCII)
+    vol_head:
+      - [0.00000, 705.00000]
+      - [0.09178, 706.50000]
+      - [0.20685, 708.00000]
+      - [0.40137, 710.00000]
+      - [0.57890, 711.50000]
+      - [0.78630, 713.00000]
+      - [1.02260, 714.50000]
+      - [1.19630, 715.50000]
+      - [1.38548, 716.50000]
+      - [1.58918, 717.50000]
+      - [1.80822, 718.50000]
+      - [2.16521, 720.00000]
+      - [2.55411, 721.50000]
+      - [2.98808, 723.00000]
+      - [3.47000, 724.50000]
+      - [3.99233, 726.00000]
+      - [4.55274, 727.50000]
+      - [5.15000, 729.00000]
+      - [5.86521, 730.75000]
+    
+    # Endpoint management: Force periodic storage (End ≈ Start ≈ 2.5 Mm3)
+    # Endpoint management: Force periodic storage (End ≈ Start ≈ 2.5 Mm3)
+    # BEST APPROACH: Water Value Curve (WVC) Step Function
+    # This provides the necessary economic incentive for periodicity while allowing dispatch.
+    # water_value_input is in EUR/Mm3. 
+    water_value_input:
+      - [0.0, 150000.0]  # Penalize emptying below 2.5 Mm3
+      - [2.5, 150000.0]
+      - [2.501, 35000.0] # Transition to realistic market value
+      - [5.2526, 32000.0]
+    
+    # ALTERNATIVE APPROACH: Volume Schedule (Commented out)
+    # Using schedule_flag: 1 can lead to 0 generation in long horizons without careful slack tuning.
+    # schedule_flag: 1
+    # schedule:
+    #   - ["2026-01-01 00:00:00", 2.5]
+    # upper_slack: 100000.0
+    # lower_slack: 100000.0
+    
+    # Base energy value to ensure generation is preferred over spill
+    energy_value_input: 10.00
+    
+    # energy_value_input: 10.00 # Scalar fallback
+    
+    # Monthly inflow pattern (m3/s) - averaged from ASCII data
+    # In real use, you'd load hourly data
+    inflow_pattern:
+      - ["2026-01-01", 0.8695]
+      - ["2026-02-01", 0.6455]
+      - ["2026-03-01", 1.2633]
+      - ["2026-04-01", 1.7123]
+      - ["2026-05-01", 2.3322]
+      - ["2026-06-01", 2.0083]
+      - ["2026-07-01", 1.3119]
+      - ["2026-08-01", 1.1661]
+      - ["2026-09-01", 1.1891]
+      - ["2026-10-01", 1.8412]
+      - ["2026-11-01", 2.1668]
+      - ["2026-12-01", 1.4321]
+  
+  
+  - name: "DrauWest"
+    max_vol: 1000.00  # Mm3 (very large - essentially a river)
+    lrl: 397.00  # masl
+    hrl: 397.50  # masl
+    
+    # Volume-head relationship (simple - 2 points)
+    vol_head:
+      - [0.00000, 396.90000]
+      - [1000.00000, 397.60000]
+    
+    # Initial volume
+    start_vol: 571.428571  # Mm3
+    
+    # Endpoint water value
+    energy_value_input: 10.00  # EUR/MWh
+    
+    # No inflow (downstream reservoir fed by plant discharge)
+    inflow: 0.0
+
+# Plant connecting the two reservoirs
+plants:
+  - name: "Freibach_Plant"
+    inlet_reservoir: "Freibach"
+    outlet_reservoir: "DrauWest"
+    outlet_line: 410.00  # masl - discharge elevation (critical!)
+    main_loss: [0.00000000]  # No head loss in main tunnel
+    penstock_loss: [0.00000000, 0.00000000]  # No losses in 2 penstocks
+    num_units: 2  # 2 generator units
+    num_pumps: 2  # 2 pump units
+
+# Two generator units
+generators:
+  - name: "Gen1"
+    plant: "Freibach_Plant"
+    penstock: 1  # Connected to penstock 1
+    p_nom: 17.000  # MW - Nominal power
+    p_min: 1.000   # MW - Lowered for stability
+    p_max: 17.000  # MW - Maximum power
+    startcost: 0.0  # No start-up cost
+    
+    # Generator efficiency curve (Power-based efficiency)
+    # 13 points from the ASCII file
+    gen_eff_curve:
+      ref: 1.0
+      points:  # [Power_MW, Efficiency_%]
+        - [5.00, 94.18013]
+        - [6.00, 94.80396]
+        - [7.00, 95.32865]
+        - [8.00, 95.76343]
+        - [9.00, 96.11751]
+        - [10.00, 96.40012]
+        - [11.00, 96.62049]
+        - [12.00, 96.78784]
+        - [13.00, 96.91139]
+        - [14.00, 97.00036]
+        - [15.00, 97.06396]
+        - [16.00, 97.11143]
+        - [17.00, 97.15196]
+    
+    # Turbine efficiency curves (Discharge-based efficiency)
+    # Reference head: 324 m
+    turb_eff_curves:
+      - ref: 324.000  # Reference head in meters
+        points:  # [Discharge_m3/s, Efficiency_%]
+          - [2.20014, 72.39358]
+          - [2.48680, 76.85843]
+          - [2.79337, 79.82711]
+          - [3.11315, 81.85994]
+          - [3.43790, 83.39310]
+          - [3.75924, 84.73854]
+          - [4.07053, 86.08408]
+          - [4.36905, 87.49330]
+          - [4.65795, 88.90564]
+          - [4.94777, 90.13634]
+          - [5.25800, 90.87645]
+          - [5.61989, 90.69285]
+          - [6.08278, 89.02823]
+  
+  - name: "Gen2"
+    plant: "Freibach_Plant"
+    penstock: 2  # Connected to penstock 2
+    p_nom: 5.000  # MW
+    p_min: 0.000  # MW
+    p_max: 0.000  # MW - DEACTIVATED for full year
+    startcost: 0.0
+    
+    # Corrected generator efficiency curve (0-5 MW)
+    gen_eff_curve:
+      ref: 1.0
+      points:  # [Power_MW, Efficiency_%]
+        - [0.00, 90.00]
+        - [1.00, 92.00]
+        - [2.00, 93.50]
+        - [3.00, 94.20]
+        - [4.00, 94.70]
+        - [5.00, 95.00]
+    
+    # Corrected Turbine efficiency - matching head range (324 m)
+    turb_eff_curves:
+      - ref: 324.000
+        points: # [Discharge_m3/s, Efficiency_%]
+          - [0.50, 75.00]
+          - [0.80, 82.00]
+          - [1.20, 88.00]
+          - [1.50, 91.00]
+          - [1.80, 92.50]
+          - [2.00, 92.00]
+
+# Two reversible pump units (can work as turbines too!)
+# Two reversible pump units (can work as turbines too!)
+pumps:
+  - name: "Pump1"
+    plant: "Freibach_Plant"
+    penstock: 1
+    p_min: 0.0    # MW
+    p_max: 0.0    # MW - DEACTIVATED
+    p_nom: 1.160  # MW
+    startcost: 0.0
+    
+    # CRITICAL: Pumps need turbine efficiency curves!
+    # They can work as turbines when water flows backward
+    turb_eff_curves:
+      - ref: 304.000  # Reference head
+        points:
+          - [1.35000, 80.50000]
+      - ref: 333.000  # Alternative reference head
+        points:
+          - [1.16000, 75.85000]
+  
+  - name: "Pump2"
+    plant: "Freibach_Plant"
+    penstock: 2
+    p_min: 5.0    # MW - BINARY FIXED POINT
+    p_max: 5.0    # MW
+    p_nom: 5.0    # MW
+    startcost: 500.0  # Encourage longer runs
+    
+    # Turbine efficiency curves for pump in turbine mode
+    # For binary 5MW pump, we provide single point representing ~1.5 m3/s at ~300m
+    turb_eff_curves:
+      - ref: 304.000
+        points:
+          - [1.50000, 85.00000]
+      - ref: 333.000
+        points:
+          - [1.40000, 84.00000]
+
+# Gates for bypass and spillway
+gates:
+  - name: "Bypass_Freibach"
+    type: "bypass"
+    from_reservoir: "Freibach"
+    max_flow: 1000.0  # m3/s - Very large (unrestricted bypass)
+  
+  - name: "Spillway_DrauWest"
+    type: "spillway"
+    from_reservoir: "DrauWest"
+    max_flow: 5.0  # m3/s - Limited spillway
+
+# Time settings - using the same period as ASCII (1 year)
+time:
+  starttime: "2026-01-29T00:00:00"
+  endtime: "2027-01-01T00:00:00"  # 1 year optimization
+  timeresolution: 60  # minutes (hourly)
+
+# Market prices would be loaded from external file
+# The ASCII has 8088 hourly price points
+# For now, will be set programmatically
+market:
+  name: "DayAhead"
+  # Prices will be loaded from CSV or set in Python
+  # Average price range from ASCII: ~135-190 NOK/MWh (~13-19 EUR/MWh)

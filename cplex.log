@@ -1,0 +1,719 @@
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_Simplex_Limits_Iterations               10000000
+CPXPARAM_TimeLimit                               900
+Tried aggregator 1 time.
+LP Presolve eliminated 70080 rows and 43801 columns.
+Aggregator did 43800 substitutions.
+Reduced LP has 61323 rows, 131409 columns, and 438010 nonzeros.
+Presolve time = 0.36 sec. (258.70 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =   -8790994535.819994
+Perturbation started.
+Iteration:   101   Dual objective     =   -8790994535.819994
+Iteration:  1828   Dual objective     =   -6981480662.649626
+Iteration:  3556   Dual objective     =   -5202815063.039027
+Iteration:  5282   Dual objective     =   -3221565033.936615
+Iteration:  7010   Dual objective     =   -1549011428.707148
+Iteration:  8736   Dual objective     =    -115247522.743362
+Iteration:  9827   Dual objective     =     -14050086.993670
+Iteration: 10920   Dual objective     =     -13601332.163458
+Iteration: 12012   Dual objective     =     -13600782.934225
+Iteration: 13115   Dual objective     =     -13600782.933688
+Iteration: 14225   Dual objective     =     -13600782.933161
+Iteration: 15342   Dual objective     =     -13600782.932623
+Iteration: 16467   Dual objective     =     -13600782.932075
+Iteration: 17599   Dual objective     =     -13600782.931523
+Iteration: 18738   Dual objective     =     -13600782.930978
+Iteration: 19842   Dual objective     =     -13600779.653670
+Iteration: 20960   Dual objective     =     -13600543.620288
+Iteration: 21365   Dual objective     =     -12075748.198635
+Iteration: 22364   Dual objective     =    5440031167.091726
+Iteration: 22645   Dual objective     =   29838536520.801281
+Iteration: 22741   Dual objective     =   41547645875.601791
+Iteration: 22825   Dual objective     =   51310653849.682320
+Iteration: 22911   Dual objective     =   60937814461.682762
+Iteration: 22999   Dual objective     =   70386565313.363281
+Iteration: 23089   Dual objective     =   79659359305.043640
+Iteration: 23269   Dual objective     =   98217986202.399109
+Iteration: 23684   Dual objective     =  145277895594.273041
+Iteration: 23836   Dual objective     =  160728919949.473511
+Iteration: 23978   Dual objective     =  174427149624.993774
+Iteration: 24150   Dual objective     =  191805365326.194489
+Iteration: 24330   Dual objective     =  211197813999.715210
+Iteration: 24540   Dual objective     =  233090391088.915497
+Iteration: 24806   Dual objective     =  259795537935.635559
+Iteration: 25062   Dual objective     =  282631857846.852661
+Iteration: 25299   Dual objective     =  300749803293.571777
+Iteration: 25600   Dual objective     =  323694421395.850037
+Iteration: 25979   Dual objective     =  350544956725.210876
+Iteration: 26251   Dual objective     =  365250397773.625427
+Iteration: 26818   Dual objective     =  391481007722.216248
+Iteration: 27408   Dual objective     =  403242687919.824280
+Elapsed time = 4.53 sec. (10006.40 ticks, 29221 iterations)
+Iteration: 29221   Dual objective     =  404219932864.651855
+Iteration: 30382   Dual objective     =  404219932864.650513
+Iteration: 31543   Dual objective     =  404219932864.650513
+Iteration: 32704   Dual objective     =  404219932864.650513
+Iteration: 33021   Dual objective     =  404237943910.830505
+Iteration: 33469   Dual objective     =  404868486621.441223
+Iteration: 34304   Dual objective     =  405026798285.572876
+Removing perturbation.
+
+Optimal solution is available
+Solution value = 405429073619.111084
+
+Simplex iterations = 34676
+
+
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_Simplex_Limits_Iterations               10000000
+CPXPARAM_TimeLimit                               900
+Problem is feasible; no conflict available.
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_Simplex_Limits_Iterations               10000000
+CPXPARAM_TimeLimit                               900
+Tried aggregator 1 time.
+LP Presolve eliminated 80777 rows and 54498 columns.
+Aggregator did 50621 substitutions.
+Reduced LP has 61323 rows, 131409 columns, and 444831 nonzeros.
+Presolve time = 0.41 sec. (271.01 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =   -8790994535.819994
+Perturbation started.
+Iteration:   101   Dual objective     =   -8790994535.820030
+Iteration:  1848   Dual objective     =   -6972001055.908798
+Iteration:  3596   Dual objective     =   -5329012692.492990
+Iteration:  5343   Dual objective     =   -3737091568.740185
+Iteration:  7090   Dual objective     =   -1816533360.495697
+Iteration:  8825   Dual objective     =     -23163626.787037
+Iteration:  9850   Dual objective     =     -15827936.259778
+Iteration: 10947   Dual objective     =     -15824159.670652
+Iteration: 12058   Dual objective     =     -15824159.670113
+Iteration: 13176   Dual objective     =     -15824159.669559
+Iteration: 14302   Dual objective     =     -15824159.666696
+Iteration: 15434   Dual objective     =     -15824159.655799
+Iteration: 16573   Dual objective     =     -15824159.641668
+Iteration: 17720   Dual objective     =     -15824159.617316
+Iteration: 18873   Dual objective     =     -15824159.616789
+Iteration: 20031   Dual objective     =     -15824159.458828
+Iteration: 20489   Dual objective     =     -15790929.548529
+Iteration: 21474   Dual objective     =    3476513723.969469
+Iteration: 21819   Dual objective     =   23379658802.183018
+Iteration: 21912   Dual objective     =   32649626014.467079
+Iteration: 21997   Dual objective     =   43054411689.777336
+Iteration: 22085   Dual objective     =   53799148634.727425
+Iteration: 22173   Dual objective     =   64376796934.116043
+Iteration: 22269   Dual objective     =   75300231821.592499
+Iteration: 22361   Dual objective     =   86008143894.067276
+Iteration: 22459   Dual objective     =   96859605596.849960
+Iteration: 22557   Dual objective     =  107883446097.863052
+Iteration: 22657   Dual objective     =  118977935616.185303
+Iteration: 22761   Dual objective     =  130345044575.891357
+Iteration: 22867   Dual objective     =  141352218059.514130
+Iteration: 22979   Dual objective     =  152761801616.915558
+Iteration: 23091   Dual objective     =  164253340525.908539
+Iteration: 23287   Dual objective     =  184739837427.404053
+Iteration: 23489   Dual objective     =  205970499061.371948
+Iteration: 23683   Dual objective     =  225949553977.172760
+Iteration: 23889   Dual objective     =  246992593035.553589
+Iteration: 24111   Dual objective     =  268923962982.071991
+Iteration: 24326   Dual objective     =  286749330586.998962
+Iteration: 24468   Dual objective     =  292334699422.500793
+Iteration: 25066   Dual objective     =  342713461001.406128
+Iteration: 25358   Dual objective     =  359027090582.557861
+Elapsed time = 6.09 sec. (10000.36 ticks, 25615 iterations)
+Iteration: 25709   Dual objective     =  378233692130.654968
+Iteration: 26019   Dual objective     =  391150384814.181885
+Iteration: 26463   Dual objective     =  398287808017.863159
+Iteration: 27530   Dual objective     =  401166526786.719055
+Iteration: 29007   Dual objective     =  401212834061.715027
+Iteration: 29490   Dual objective     =  403503895051.958069
+Iteration: 29787   Dual objective     =  404245789006.108643
+Iteration: 30141   Dual objective     =  404675598587.632080
+Iteration: 30645   Dual objective     =  405023069956.124023
+Iteration: 32440   Dual objective     =  405047288036.215820
+Iteration: 33219   Dual objective     =  405060916584.281982
+Iteration: 33630   Dual objective     =  405240334536.129395
+Iteration: 34140   Dual objective     =  405382635784.680420
+Removing perturbation.
+
+Optimal solution is available
+Solution value = 405429168350.036255
+
+Simplex iterations = 34262
+
+
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_Simplex_Limits_Iterations               10000000
+CPXPARAM_TimeLimit                               900
+Problem is feasible; no conflict available.
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_Simplex_Limits_Iterations               10000000
+CPXPARAM_TimeLimit                               900
+Tried aggregator 1 time.
+LP Presolve eliminated 80774 rows and 54495 columns.
+Aggregator did 50624 substitutions.
+Reduced LP has 61323 rows, 131410 columns, and 444841 nonzeros.
+Presolve time = 0.52 sec. (271.10 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =   -8790994535.819994
+Perturbation started.
+Iteration:   101   Dual objective     =   -8790994535.819967
+Iteration:  1849   Dual objective     =   -6941192310.403397
+Iteration:  3595   Dual objective     =   -5310216509.095451
+Iteration:  5343   Dual objective     =   -3585201262.599353
+Iteration:  7092   Dual objective     =   -1663103332.865921
+Iteration:  8774   Dual objective     =    -101494610.662997
+Iteration:  9789   Dual objective     =     -15808841.714639
+Iteration: 10886   Dual objective     =     -15804960.500040
+Iteration: 11997   Dual objective     =     -15804960.494293
+Iteration: 13115   Dual objective     =     -15804960.493742
+Iteration: 14241   Dual objective     =     -15804960.491165
+Iteration: 15373   Dual objective     =     -15804960.485296
+Iteration: 16513   Dual objective     =     -15804960.472739
+Iteration: 17660   Dual objective     =     -15804960.442934
+Iteration: 18813   Dual objective     =     -15804960.442415
+Iteration: 19983   Dual objective     =     -15804960.295651
+Iteration: 20519   Dual objective     =     -15764808.141301
+Iteration: 21474   Dual objective     =     221564020.839356
+Iteration: 21751   Dual objective     =   27131807939.331295
+Iteration: 21885   Dual objective     =   43575148186.162445
+Iteration: 22022   Dual objective     =   59436605031.814476
+Iteration: 22160   Dual objective     =   75600802870.091064
+Iteration: 22300   Dual objective     =   91388745900.196014
+Iteration: 22442   Dual objective     =  107193255435.276169
+Iteration: 22588   Dual objective     =  122825402138.234360
+Iteration: 22731   Dual objective     =  137567424898.764801
+Iteration: 22877   Dual objective     =  152467124707.589935
+Iteration: 23027   Dual objective     =  167198468608.577026
+Iteration: 23211   Dual objective     =  185209212528.057983
+Iteration: 23407   Dual objective     =  205616549712.593689
+Iteration: 23641   Dual objective     =  229984041201.028320
+Iteration: 23921   Dual objective     =  258072839617.346344
+Iteration: 24207   Dual objective     =  284105654757.557739
+Iteration: 24399   Dual objective     =  292372159123.141052
+Iteration: 25158   Dual objective     =  352622702075.885559
+Iteration: 25424   Dual objective     =  367500878059.367920
+Iteration: 25731   Dual objective     =  382728061811.608521
+Elapsed time = 6.94 sec. (10010.05 ticks, 25986 iterations)
+Iteration: 25986   Dual objective     =  392333377034.782166
+Iteration: 26443   Dual objective     =  399598155661.065735
+Iteration: 28228   Dual objective     =  401170317487.194885
+Iteration: 28934   Dual objective     =  401216573623.318115
+Iteration: 29383   Dual objective     =  403513379910.925232
+Iteration: 29886   Dual objective     =  404629110166.857117
+Iteration: 30249   Dual objective     =  404943519430.190735
+Iteration: 32059   Dual objective     =  405049061286.751160
+Iteration: 33047   Dual objective     =  405062747153.280762
+Iteration: 33684   Dual objective     =  405343857625.592468
+Iteration: 34078   Dual objective     =  405401602215.848877
+Removing perturbation.
+
+Optimal solution is available
+Solution value = 405429170813.719727
+
+Simplex iterations = 34172
+
+
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_Simplex_Limits_Iterations               10000000
+CPXPARAM_TimeLimit                               900
+Problem is feasible; no conflict available.
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_Simplex_Limits_Iterations               10000000
+CPXPARAM_TimeLimit                               900
+Tried aggregator 1 time.
+LP Presolve eliminated 80775 rows and 54496 columns.
+Aggregator did 50623 substitutions.
+Reduced LP has 61323 rows, 131411 columns, and 444847 nonzeros.
+Presolve time = 0.56 sec. (271.10 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =   -8790994535.819994
+Perturbation started.
+Iteration:   101   Dual objective     =   -8790994535.820000
+Iteration:  1848   Dual objective     =   -6955491123.405907
+Iteration:  3597   Dual objective     =   -5328187623.199467
+Iteration:  5345   Dual objective     =   -3639793570.208611
+Iteration:  7092   Dual objective     =   -1719707391.630760
+Iteration:  8772   Dual objective     =     -85673318.556846
+Iteration:  9791   Dual objective     =     -15821124.809459
+Iteration: 10876   Dual objective     =     -15813946.131102
+Iteration: 11987   Dual objective     =     -15813946.110197
+Iteration: 13105   Dual objective     =     -15813946.109648
+Iteration: 14230   Dual objective     =     -15813946.108245
+Iteration: 15364   Dual objective     =     -15813946.100390
+Iteration: 16503   Dual objective     =     -15813946.087508
+Iteration: 17649   Dual objective     =     -15813946.058287
+Iteration: 18802   Dual objective     =     -15813946.057770
+Iteration: 19957   Dual objective     =     -15813945.925498
+Iteration: 20488   Dual objective     =     -15772918.857624
+Iteration: 21417   Dual objective     =     298366422.640758
+Iteration: 21724   Dual objective     =   26997163781.810192
+Iteration: 21810   Dual objective     =   37629091121.497414
+Iteration: 21898   Dual objective     =   48354627491.737106
+Iteration: 21991   Dual objective     =   58916663093.177422
+Iteration: 22083   Dual objective     =   69789712587.721710
+Iteration: 22177   Dual objective     =   80727129203.391129
+Iteration: 22277   Dual objective     =   91966778415.403046
+Iteration: 22375   Dual objective     =  102925639581.713364
+Iteration: 22477   Dual objective     =  114158064211.513443
+Iteration: 22581   Dual objective     =  125181806328.970322
+Iteration: 22689   Dual objective     =  136241220340.493927
+Iteration: 22799   Dual objective     =  147620341361.200836
+Iteration: 23160   Dual objective     =  182779119639.274445
+Iteration: 23351   Dual objective     =  202951721577.402405
+Iteration: 23541   Dual objective     =  222630957297.903809
+Iteration: 23745   Dual objective     =  243401414191.669861
+Iteration: 23951   Dual objective     =  263809077832.090088
+Iteration: 24227   Dual objective     =  287978655467.873413
+Iteration: 24484   Dual objective     =  307878401998.127686
+Iteration: 24814   Dual objective     =  332551593523.742615
+Iteration: 25161   Dual objective     =  355455101257.583557
+Iteration: 25465   Dual objective     =  371367336834.571106
+Iteration: 25770   Dual objective     =  385637965603.228638
+Iteration: 25906   Dual objective     =  390879709179.477783
+Elapsed time = 6.36 sec. (10000.82 ticks, 25978 iterations)
+Iteration: 26367   Dual objective     =  398654121525.378601
+Iteration: 27984   Dual objective     =  401285836049.231201
+Iteration: 29004   Dual objective     =  401286056991.677429
+Iteration: 29404   Dual objective     =  403864583016.585022
+Iteration: 29710   Dual objective     =  404430323006.529541
+Iteration: 31357   Dual objective     =  405051035806.000671
+Iteration: 32996   Dual objective     =  405064721650.754028
+Iteration: 33434   Dual objective     =  405273291461.114197
+Removing perturbation.
+
+Optimal solution is available
+Solution value = 405429170671.109009
+
+Simplex iterations = 34124
+
+
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_Simplex_Limits_Iterations               10000000
+CPXPARAM_TimeLimit                               900
+Problem is feasible; no conflict available.
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_Simplex_Limits_Iterations               10000000
+CPXPARAM_TimeLimit                               900
+Tried aggregator 1 time.
+LP Presolve eliminated 80775 rows and 54496 columns.
+Aggregator did 50623 substitutions.
+Reduced LP has 61323 rows, 131412 columns, and 444854 nonzeros.
+Presolve time = 0.53 sec. (271.10 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =   -8790994535.819994
+Perturbation started.
+Iteration:   101   Dual objective     =   -8790994535.819981
+Iteration:  1849   Dual objective     =   -6954002899.216129
+Iteration:  3598   Dual objective     =   -5316930571.526587
+Iteration:  5346   Dual objective     =   -3642501736.615590
+Iteration:  7094   Dual objective     =   -1718779056.848036
+Iteration:  8780   Dual objective     =     -81798339.487401
+Iteration:  9797   Dual objective     =     -15821090.582433
+Iteration: 10894   Dual objective     =     -15814706.635737
+Iteration: 12005   Dual objective     =     -15814706.632599
+Iteration: 13124   Dual objective     =     -15814706.632050
+Iteration: 14250   Dual objective     =     -15814706.630371
+Iteration: 15383   Dual objective     =     -15814706.621154
+Iteration: 16523   Dual objective     =     -15814706.608965
+Iteration: 17671   Dual objective     =     -15814706.576203
+Iteration: 18825   Dual objective     =     -15814706.575674
+Iteration: 19974   Dual objective     =     -15814706.425881
+Iteration: 20449   Dual objective     =     -15773847.080513
+Iteration: 21369   Dual objective     =     300232347.977742
+Iteration: 21550   Dual objective     =   10210287823.302748
+Iteration: 21718   Dual objective     =   27738650744.385059
+Iteration: 21906   Dual objective     =   47459777043.431274
+Iteration: 22110   Dual objective     =   68672247613.766502
+Iteration: 22325   Dual objective     =   92407593986.675659
+Iteration: 22405   Dual objective     =  102582559986.536041
+Iteration: 22495   Dual objective     =  112942794695.253235
+Iteration: 22587   Dual objective     =  123849223452.709991
+Iteration: 22681   Dual objective     =  134838138585.003250
+Iteration: 22777   Dual objective     =  145907829308.085663
+Iteration: 22877   Dual objective     =  157003016441.593689
+Iteration: 22980   Dual objective     =  168148481323.925507
+Iteration: 23085   Dual objective     =  179309096733.888702
+Iteration: 23521   Dual objective     =  230799164650.421143
+Iteration: 23641   Dual objective     =  238770004417.438751
+Iteration: 24007   Dual objective     =  276538354027.539246
+Iteration: 24139   Dual objective     =  283390230259.427917
+Iteration: 24656   Dual objective     =  328210694522.601135
+Iteration: 24804   Dual objective     =  333708226343.984619
+Iteration: 25260   Dual objective     =  366048331631.721558
+Iteration: 25603   Dual objective     =  381583520660.641357
+Iteration: 25925   Dual objective     =  393613207201.091492
+Elapsed time = 5.94 sec. (10000.03 ticks, 26265 iterations)
+Iteration: 26358   Dual objective     =  400029231876.622131
+Iteration: 28032   Dual objective     =  401083056695.698120
+Iteration: 28854   Dual objective     =  401129967720.810852
+Iteration: 29411   Dual objective     =  403988856084.221985
+Iteration: 29897   Dual objective     =  404684414328.492249
+Iteration: 31678   Dual objective     =  405051035660.025818
+Iteration: 32844   Dual objective     =  405051035660.025818
+Iteration: 33284   Dual objective     =  405255105487.256409
+Iteration: 34061   Dual objective     =  405429170674.664307
+Removing perturbation.
+
+Optimal solution is available
+Solution value = 405429170673.864563
+
+Simplex iterations = 34062
+
+
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_Simplex_Limits_Iterations               10000000
+CPXPARAM_TimeLimit                               900
+Problem is feasible; no conflict available.
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_Simplex_Limits_Iterations               10000000
+CPXPARAM_TimeLimit                               900
+Tried aggregator 1 time.
+LP Presolve eliminated 40309 rows and 20617 columns.
+Aggregator did 6823 substitutions.
+Reduced LP has 39929 rows, 126620 columns, and 240598 nonzeros.
+Presolve time = 0.22 sec. (145.43 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =   -8790915509.423220
+Iteration:  1730   Dual objective     =   -7060387374.482763
+Iteration:  2946   Dual objective     =   -5793225556.164770
+Iteration:  4158   Dual objective     =   -4568281213.917840
+Iteration:  5637   Dual objective     =   -3167464059.463591
+Iteration:  6879   Dual objective     =   -1853765493.035695
+Iteration:  8084   Dual objective     =    -572943921.328882
+Iteration:  9016   Dual objective     =     -12373966.491548
+Iteration:  9221   Dual objective     =     -12191550.807932
+Iteration: 10402   Dual objective     =     -12182595.465127
+Iteration: 11071   Dual objective     =     -12182448.121741
+Iteration: 11414   Dual objective     =     -12182355.524239
+Iteration: 12259   Dual objective     =     -12181026.207651
+Perturbation started.
+Iteration: 12903   Dual objective     =     -12180733.548772
+Iteration: 13619   Dual objective     =     -12180733.369426
+Iteration: 14454   Dual objective     =     -12180733.134096
+Iteration: 14731   Dual objective     =      69527089.223049
+Iteration: 15539   Dual objective     =      70069889.495725
+Iteration: 16209   Dual objective     =      70686667.743344
+Iteration: 16893   Dual objective     =    7920952718.919543
+Iteration: 16992   Dual objective     =   11074153045.740067
+Iteration: 17077   Dual objective     =   13610764152.931416
+Iteration: 17172   Dual objective     =   16651167862.590826
+Iteration: 17271   Dual objective     =   19489183710.885262
+Iteration: 17362   Dual objective     =   22476691083.315651
+Iteration: 17442   Dual objective     =   25399375125.291176
+Iteration: 17536   Dual objective     =   28737471943.947502
+Iteration: 17598   Dual objective     =   35857151437.661102
+Iteration: 17660   Dual objective     =   42676909877.014839
+Iteration: 17722   Dual objective     =   49650325525.889854
+Iteration: 17790   Dual objective     =   57252513501.599869
+Iteration: 17878   Dual objective     =   66456887849.852730
+Iteration: 17957   Dual objective     =   74332613148.461197
+Iteration: 18032   Dual objective     =   82103854753.170242
+Iteration: 18120   Dual objective     =   91201403476.146439
+Iteration: 18206   Dual objective     =   99913755289.578415
+Iteration: 18291   Dual objective     =  108708851183.002060
+Iteration: 18379   Dual objective     =  117367965437.990158
+Iteration: 18466   Dual objective     =  125261887759.205872
+Iteration: 18559   Dual objective     =  133911614701.221497
+Iteration: 18652   Dual objective     =  141695260827.638367
+Iteration: 18753   Dual objective     =  149979272201.448059
+Iteration: 18864   Dual objective     =  159497746732.350098
+Iteration: 18970   Dual objective     =  168480413378.837677
+Iteration: 19044   Dual objective     =  174389922476.590027
+Iteration: 19239   Dual objective     =  188925019040.961334
+Iteration: 19374   Dual objective     =  201087970185.140900
+Iteration: 19517   Dual objective     =  212996211600.895782
+Iteration: 19677   Dual objective     =  224245912600.714691
+Iteration: 19849   Dual objective     =  236509422733.292480
+Iteration: 20012   Dual objective     =  247886272254.450226
+Iteration: 20218   Dual objective     =  261930209263.709320
+Iteration: 20362   Dual objective     =  271331754871.603912
+Iteration: 20586   Dual objective     =  283828805751.877197
+Iteration: 20758   Dual objective     =  293770632499.572449
+Iteration: 21025   Dual objective     =  306344456411.241211
+Elapsed time = 5.67 sec. (10000.93 ticks, 21333 iterations)
+Iteration: 21372   Dual objective     =  323729840253.034241
+Iteration: 21795   Dual objective     =  344301827983.097534
+Iteration: 22078   Dual objective     =  356449276522.739868
+Iteration: 22290   Dual objective     =  364578083337.897156
+Iteration: 23341   Dual objective     =  375964405677.090576
+Iteration: 23516   Dual objective     =  379739076951.892273
+Iteration: 23759   Dual objective     =  386183013490.255371
+Iteration: 23845   Dual objective     =  388799394257.545593
+Iteration: 23933   Dual objective     =  391330974546.380249
+Iteration: 24011   Dual objective     =  393178401423.839844
+Iteration: 24356   Dual objective     =  394727279853.438782
+Iteration: 24544   Dual objective     =  394998701940.004333
+Iteration: 24628   Dual objective     =  397029690793.264404
+Iteration: 24712   Dual objective     =  398840706729.503235
+Iteration: 24794   Dual objective     =  400431544291.713623
+Iteration: 24892   Dual objective     =  401641053341.049805
+Iteration: 24975   Dual objective     =  402855941835.066895
+Iteration: 25243   Dual objective     =  403331281014.656677
+Iteration: 25337   Dual objective     =  404083746172.589966
+Iteration: 25482   Dual objective     =  404501300264.464233
+Iteration: 25626   Dual objective     =  404673923553.499268
+Iteration: 26119   Dual objective     =  404725467301.942322
+Iteration: 26447   Dual objective     =  404727541739.866089
+Iteration: 26753   Dual objective     =  404757129084.672546
+Iteration: 27123   Dual objective     =  405163778715.687561
+Iteration: 27236   Dual objective     =  405307453888.804199
+Iteration: 27392   Dual objective     =  405382957503.486084
+Iteration: 27556   Dual objective     =  405425161162.631409
+Removing perturbation.
+
+Optimal solution is available
+Solution value = 405429170991.003967
+
+Simplex iterations = 27660
+
+
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_Simplex_Limits_Iterations               10000000
+CPXPARAM_TimeLimit                               900
+Problem is feasible; no conflict available.
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_Simplex_Limits_Iterations               10000000
+CPXPARAM_TimeLimit                               900
+Tried aggregator 1 time.
+LP Presolve eliminated 40309 rows and 20617 columns.
+Aggregator did 6823 substitutions.
+Reduced LP has 39929 rows, 126621 columns, and 240600 nonzeros.
+Presolve time = 0.24 sec. (145.38 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =   -8790492868.261370
+Iteration:  1996   Dual objective     =   -6823300658.410618
+Iteration:  3207   Dual objective     =   -5661887961.711694
+Iteration:  4414   Dual objective     =   -4301981706.315321
+Iteration:  5881   Dual objective     =   -2873251678.306883
+Iteration:  7139   Dual objective     =   -1602936090.654284
+Iteration:  8339   Dual objective     =    -373774629.353593
+Iteration:  9186   Dual objective     =     -12819577.431247
+Iteration:  9888   Dual objective     =     -12650085.821145
+Iteration: 10742   Dual objective     =     -12650017.011165
+Iteration: 11474   Dual objective     =     -12649797.603639
+Iteration: 12202   Dual objective     =     -12649629.831416
+Iteration: 12459   Dual objective     =     -12649561.254500
+Iteration: 13325   Dual objective     =     -12642819.281019
+Perturbation started.
+Iteration: 14014   Dual objective     =     -12633983.139963
+Iteration: 14753   Dual objective     =     -12633980.451170
+Iteration: 15534   Dual objective     =     -12633980.240230
+Iteration: 16094   Dual objective     =     -12633776.970827
+Iteration: 16897   Dual objective     =     109437064.850835
+Iteration: 17587   Dual objective     =   12467123763.922651
+Iteration: 17670   Dual objective     =   14990322221.037691
+Iteration: 17745   Dual objective     =   17632370100.402733
+Iteration: 17831   Dual objective     =   20137980321.730785
+Iteration: 17919   Dual objective     =   22956697510.655937
+Iteration: 17992   Dual objective     =   26343793066.458416
+Iteration: 18056   Dual objective     =   30054441414.019348
+Iteration: 18135   Dual objective     =   33668979683.026722
+Iteration: 18197   Dual objective     =   39552753160.794594
+Iteration: 18277   Dual objective     =   47825371965.323891
+Iteration: 18350   Dual objective     =   55519018290.558167
+Iteration: 18425   Dual objective     =   63107666251.653282
+Iteration: 18505   Dual objective     =   71348567071.531097
+Iteration: 18592   Dual objective     =   78779674369.512970
+Iteration: 18675   Dual objective     =   86825762283.708633
+Iteration: 18765   Dual objective     =   95692895339.824280
+Iteration: 18850   Dual objective     =  103956385623.286194
+Iteration: 18935   Dual objective     =  111930237523.547348
+Iteration: 19020   Dual objective     =  119300879558.831375
+Iteration: 19111   Dual objective     =  127295188986.803223
+Iteration: 19203   Dual objective     =  135093651679.664658
+Iteration: 19289   Dual objective     =  141950773799.425812
+Iteration: 19606   Dual objective     =  167042192332.848724
+Iteration: 19728   Dual objective     =  176865872458.931854
+Iteration: 19916   Dual objective     =  185948068895.266541
+Iteration: 20026   Dual objective     =  194664248269.228333
+Iteration: 20136   Dual objective     =  203331613413.999542
+Iteration: 20243   Dual objective     =  211726568847.135742
+Iteration: 20356   Dual objective     =  220654619084.445435
+Iteration: 20480   Dual objective     =  224436053502.750916
+Iteration: 20594   Dual objective     =  233299044532.332916
+Iteration: 20722   Dual objective     =  242957380712.758820
+Iteration: 20855   Dual objective     =  253154454087.664642
+Iteration: 20982   Dual objective     =  262386849478.251526
+Iteration: 21143   Dual objective     =  270419380339.809845
+Iteration: 21300   Dual objective     =  281136980271.840637
+Iteration: 21440   Dual objective     =  290171657671.099854
+Iteration: 21642   Dual objective     =  302344271249.714294
+Iteration: 21997   Dual objective     =  315559028246.981812
+Elapsed time = 5.63 sec. (10000.23 ticks, 22230 iterations)
+Iteration: 22282   Dual objective     =  332057052375.903992
+Iteration: 22591   Dual objective     =  348491464960.373291
+Iteration: 22846   Dual objective     =  355650569711.722656
+Iteration: 23017   Dual objective     =  363177628981.097168
+Iteration: 23212   Dual objective     =  371348778734.410767
+Iteration: 23426   Dual objective     =  377406716593.474915
+Iteration: 23548   Dual objective     =  381943201051.419739
+Iteration: 23618   Dual objective     =  384389519677.459229
+Iteration: 23875   Dual objective     =  389901479374.120667
+Iteration: 23954   Dual objective     =  391920851005.421997
+Iteration: 24031   Dual objective     =  393900444437.674255
+Iteration: 24688   Dual objective     =  395586947772.123840
+Iteration: 24951   Dual objective     =  395656731878.762024
+Iteration: 25031   Dual objective     =  397179467625.769287
+Iteration: 25285   Dual objective     =  400904587048.494934
+Iteration: 25377   Dual objective     =  401939189086.445740
+Iteration: 25474   Dual objective     =  402959594384.320618
+Iteration: 25565   Dual objective     =  403814517796.339783
+Iteration: 25732   Dual objective     =  404277765954.119934
+Iteration: 25978   Dual objective     =  404450312125.431519
+Iteration: 26566   Dual objective     =  404488183467.350769
+Iteration: 26832   Dual objective     =  404509597374.079468
+Iteration: 26912   Dual objective     =  404624151764.016846
+Iteration: 27012   Dual objective     =  404686554793.938843
+Iteration: 27150   Dual objective     =  404839545402.516541
+Iteration: 27523   Dual objective     =  405274824534.374573
+Iteration: 27653   Dual objective     =  405343773593.761841
+Iteration: 27823   Dual objective     =  405397534562.972717
+Iteration: 28013   Dual objective     =  405428704563.630371
+Removing perturbation.
+
+Optimal solution is available
+Solution value = 405429170966.561707
+
+Simplex iterations = 28043
+
+
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_Simplex_Limits_Iterations               10000000
+CPXPARAM_TimeLimit                               900
+Problem is feasible; no conflict available.
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_Simplex_Limits_Iterations               10000000
+CPXPARAM_TimeLimit                               900
+Tried aggregator 1 time.
+LP Presolve eliminated 40309 rows and 20617 columns.
+Aggregator did 6823 substitutions.
+Reduced LP has 39929 rows, 126622 columns, and 240602 nonzeros.
+Presolve time = 0.23 sec. (145.38 ticks)
+Initializing dual steep norms . . .
+
+Iteration log . . .
+Iteration:     1   Dual objective     =   -8790993535.483870
+Iteration:  1994   Dual objective     =   -6825102614.921992
+Iteration:  3205   Dual objective     =   -5661418797.590080
+Iteration:  4412   Dual objective     =   -4309609153.601341
+Iteration:  5879   Dual objective     =   -2880750593.613619
+Iteration:  7137   Dual objective     =   -1617791922.424060
+Iteration:  8337   Dual objective     =    -380415359.631855
+Iteration:  9186   Dual objective     =     -12818124.449026
+Iteration:  9920   Dual objective     =     -12648684.577798
+Iteration: 10763   Dual objective     =     -12648656.651847
+Iteration: 11497   Dual objective     =     -12648436.807353
+Iteration: 12174   Dual objective     =     -12648285.281218
+Iteration: 12434   Dual objective     =     -12648214.277927
+Iteration: 13327   Dual objective     =     -12638257.993782
+Iteration: 14034   Dual objective     =     -12632848.747422
+Perturbation started.
+Iteration: 14115   Dual objective     =     -12632848.747422
+Iteration: 14854   Dual objective     =     -12632848.560426
+Iteration: 15668   Dual objective     =     -12632848.332113
+Iteration: 16089   Dual objective     =     -12632643.938509
+Iteration: 16893   Dual objective     =     110160721.956229
+Iteration: 17689   Dual objective     =   16105504559.901661
+Iteration: 18354   Dual objective     =   55124989155.962090
+Iteration: 18430   Dual objective     =   62743434100.063972
+Iteration: 18513   Dual objective     =   71228413886.208939
+Iteration: 18602   Dual objective     =   78663838917.283875
+Iteration: 18688   Dual objective     =   86945207225.423004
+Iteration: 18771   Dual objective     =   95101871606.353851
+Iteration: 18862   Dual objective     =  103645955577.624008
+Iteration: 18948   Dual objective     =  112051797993.972687
+Iteration: 19038   Dual objective     =  120117879524.793625
+Iteration: 19127   Dual objective     =  127633361618.576233
+Iteration: 19213   Dual objective     =  135020721713.215271
+Iteration: 19298   Dual objective     =  142062321061.834564
+Iteration: 19407   Dual objective     =  150531811679.429871
+Iteration: 19724   Dual objective     =  176171623433.825378
+Iteration: 19918   Dual objective     =  185659558680.407562
+Iteration: 20032   Dual objective     =  194624170833.339844
+Iteration: 20142   Dual objective     =  203056877339.048645
+Iteration: 20251   Dual objective     =  211836767053.681000
+Iteration: 20363   Dual objective     =  220764812204.043732
+Iteration: 20507   Dual objective     =  226031614200.074707
+Iteration: 20629   Dual objective     =  235689787991.778259
+Iteration: 20749   Dual objective     =  244528914962.578796
+Iteration: 20878   Dual objective     =  254400010832.137604
+Iteration: 21012   Dual objective     =  264333229570.205963
+Iteration: 21136   Dual objective     =  270043940024.619110
+Iteration: 21263   Dual objective     =  278662424102.135010
+Iteration: 21392   Dual objective     =  286238232370.473572
+Iteration: 21576   Dual objective     =  297707976955.060669
+Iteration: 21925   Dual objective     =  311315582757.952026
+Iteration: 22193   Dual objective     =  325921249616.251221
+Elapsed time = 5.55 sec. (10000.62 ticks, 22448 iterations)
+Iteration: 22476   Dual objective     =  341998411822.165649
+Iteration: 22787   Dual objective     =  352492807716.692322
+Iteration: 22979   Dual objective     =  360699992233.607971
+Iteration: 23161   Dual objective     =  368524986475.207642
+Iteration: 23266   Dual objective     =  372787522493.030945
+Iteration: 23403   Dual objective     =  375407159372.269592
+Iteration: 23594   Dual objective     =  382662947091.695618
+Iteration: 23710   Dual objective     =  386021277788.150452
+Iteration: 23783   Dual objective     =  388501075195.427917
+Iteration: 23899   Dual objective     =  389717682525.818298
+Iteration: 23977   Dual objective     =  391973890491.594666
+Iteration: 24063   Dual objective     =  394219255474.155029
+Iteration: 24692   Dual objective     =  395692312234.059326
+Iteration: 24955   Dual objective     =  395761705304.508301
+Iteration: 25017   Dual objective     =  397057632447.453430
+Iteration: 25079   Dual objective     =  398037503179.208252
+Iteration: 25231   Dual objective     =  398582998680.584106
+Iteration: 25293   Dual objective     =  399351077802.998657
+Iteration: 25619   Dual objective     =  399666233640.188477
+Iteration: 26513   Dual objective     =  404107756570.862183
+Iteration: 26692   Dual objective     =  404383477924.686157
+Iteration: 27289   Dual objective     =  404800241614.851868
+Iteration: 27579   Dual objective     =  404800337201.835571
+Iteration: 27812   Dual objective     =  404802664886.529724
+Iteration: 27994   Dual objective     =  404813418789.932556
+Iteration: 28116   Dual objective     =  404847718676.251892
+Iteration: 28656   Dual objective     =  405334008600.292358
+Iteration: 28790   Dual objective     =  405374902606.083435
+Removing perturbation.
+
+Optimal solution is available
+Solution value = 405429170966.612610
+
+Simplex iterations = 29060
+
+
+Version identifier: 20.1.0.0 | 2020-11-10 | 9bedb6d68
+CPXPARAM_Output_CloneLog                         -1
+CPXPARAM_Simplex_Limits_Iterations               10000000
+CPXPARAM_TimeLimit                               900
+Problem is feasible; no conflict available.

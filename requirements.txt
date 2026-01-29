@@ -1,0 +1,11 @@
+# SHOP optimization package
+sintef-pyshop
+
+# Data handling and analysis
+pandas
+numpy
+openpyxl
+pyyaml
+
+# Visualization
+matplotlib

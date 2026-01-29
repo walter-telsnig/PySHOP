@@ -1,0 +1,83 @@
+# Simple topology: 1 Reservoir + 1 Plant (with turbine and pump)
+#
+# Topology:
+#   [UpperReservoir]
+#         |
+#     [Plant1] (turbine + pump)
+#         |
+#   [LowerReservoir]
+
+topology:
+  name: "Simple Pump-Turbine System"
+  description: "Basic topology with one plant containing a turbine and pump between two reservoirs"
+
+reservoirs:
+  - name: "UpperRes"
+    max_vol: 12.0  # Mm3
+    lrl: 90.0      # Lower regulation limit (masl)
+    hrl: 100.0     # Higher regulation limit (masl)
+    vol_head:      # Volume-head curve
+      - [0.0, 90.0]
+      - [12.0, 100.0]
+    start_head: 95.0  # Initial water level (masl)
+    # Endpoint management: energy value defines worth of water at end period
+    energy_value_input: 30.0  # Energy value for water at end period (EUR/MWh)
+    
+  - name: "LowerRes"
+    max_vol: 5.0   # Mm3
+    lrl: 40.0      # masl
+    hrl: 45.0      # masl
+    vol_head:
+      - [0.0, 40.0]
+      - [5.0, 45.0]
+    start_head: 42.0
+    # Endpoint management: energy value defines worth of water at end period
+    energy_value_input: 30.0  # Energy value for water at end period (EUR/MWh)
+
+plants:
+  - name: "Plant1"
+    inlet_reservoir: "UpperRes"
+    outlet_reservoir: "LowerRes"
+    main_loss: [0.0002]  # Head loss factor
+    penstock_loss: [0.0]
+    
+generators:
+  - name: "Gen1"
+    plant: "Plant1"
+    penstock: 1
+    p_min: 25.0     # MW
+    p_max: 100.0    # MW
+    p_nom: 100.0    # MW
+    startcost: 500  # Start-up cost
+    
+    # Turbine efficiency curve (Q, efficiency) at nominal head
+    turb_eff_curves:
+      - ref: 95.0  # Reference head (masl)
+        points:
+          - [25.0, 0.80]   # (Discharge m3/s, efficiency %)
+          - [50.0, 0.92]
+          - [100.0, 0.95]
+          - [120.0, 0.93]
+
+pumps:
+  - name: "Pump1"
+    plant: "Plant1"
+    penstock: 1
+    p_min: 20.0     # MW
+    p_max: 80.0     # MW
+    p_nom: 80.0     # MW
+    
+    # Pump efficiency curve
+    pump_eff_curves:
+      - ref: 95.0  # Reference head
+        points:
+          - [20.0, 0.75]   # (Discharge m3/s, efficiency %)
+          - [40.0, 0.85]
+          - [60.0, 0.88]
+          - [80.0, 0.86]
+
+# Time settings (will typically be overridden in Python)
+time:
+  starttime: "2024-01-01T00:00:00"
+  endtime: "2024-01-15T00:00:00"  # 2 weeks
+  timeresolution: 60  # minutes

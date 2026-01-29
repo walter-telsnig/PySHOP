@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+.env
+
+# SHOP
+shop.log
+shop_yaml.yaml
+Licence/
+
+# Project Data
+data/output/
+*.png
+*.csv
+
+# IDEs
+.vscode/
+.idea/
